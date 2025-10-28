@@ -1,0 +1,225 @@
+.rcm-services-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.rcm-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.rcm-services-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 15px;
+}
+
+.rcm-services-header h2 {
+    font-size: 42px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.rcm-services-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #00A6E6;
+}
+
+.rcm-services-header p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.rcm-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.rcm-service-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 380px;
+    position: relative;
+}
+
+.rcm-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 166, 230, 0.15);
+}
+
+.rcm-service-icon {
+    width: 90px;
+    height: 90px;
+    background: #e6f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+}
+
+.rcm-service-card:hover .rcm-service-icon {
+    background: #00A6E6;
+    transform: scale(1.1);
+}
+
+.rcm-service-card:hover .rcm-service-icon-svg {
+    color: #fff;
+}
+
+.rcm-service-icon-svg {
+    font-size: 36px;
+    color: #00A6E6;
+    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;
+}
+
+.rcm-service-card h3 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rcm-service-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.rcm-read-more {
+    background: #00A6E6;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.rcm-read-more:hover {
+    background: #0088cc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 166, 230, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .rcm-container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rcm-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .rcm-service-card {
+        padding: 35px 25px;
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 992px) {
+    .rcm-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .rcm-services-header h2 {
+        font-size: 36px;
+    }
+
+    .rcm-service-card {
+        min-height: 340px;
+    }
+
+    .rcm-service-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rcm-services-section {
+        padding: 70px 0;
+    }
+
+    .rcm-container {
+        padding: 0 20px;
+    }
+
+    .rcm-services-header {
+        margin-bottom: 40px;
+    }
+
+    .rcm-service-card h3 {
+        font-size: 20px;
+        min-height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rcm-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .rcm-services-header h2 {
+        font-size: 32px;
+    }
+    
+    .rcm-services-header p {
+        font-size: 16px;
+    }
+
+    .rcm-service-card {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .rcm-read-more {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}

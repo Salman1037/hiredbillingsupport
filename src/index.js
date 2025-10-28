@@ -1,6 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
+// Import all required CSS files
+import './assets/css/animate.min.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/fontawesome.css';
+import './assets/css/magnific-popup.min.css';
+import './assets/css/odometer.min.css';
+import './assets/css/style.css';
+import './assets/css/swiper-bundle.min.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
