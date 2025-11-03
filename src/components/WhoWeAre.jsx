@@ -76,7 +76,7 @@
 
 // export default WhoWeAre;
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import { Container, Row, Col, Card } from "react-bootstrap";
 import AboutMain from "../assets/images/avatar/AboutMain.png"; // main image
 // import AboutSmall from "../assets/AboutSmall.png"; // small top-left image

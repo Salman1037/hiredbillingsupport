@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import AboutMain2 from "../assets/images/avatar/AboutMain2.png"; // main image
 // import AboutSmall2 from "../assets/AboutSmall2.png"; // top-left small image

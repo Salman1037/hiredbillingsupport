@@ -1,5 +1,5 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
+
 import { Container, Row, Col, Card } from "react-bootstrap";
 import AboutMain from "../assets/images/avatar/AboutMain3.png"; // main image
 
