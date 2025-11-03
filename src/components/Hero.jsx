@@ -1,6 +1,6 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import heroGif from '../assets/images/hero/hero_gif.gif';
 
 const heroTexts = [
   'Remote Medical & Dental VAs',
@@ -205,8 +205,8 @@ const Squares = ({
 
 function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const isRemoteStaffing = activeIndex === heroTexts.length - 1;
+  const [isAnimating] = useState(false);
+  // const isRemoteStaffing = activeIndex === heroTexts.length - 1;
 
   return (
     <section className="hero_section" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -280,7 +280,7 @@ function Hero() {
               {!isAnimating && (
                 <img
                   key={activeIndex}
-                  src={isRemoteStaffing ? '/images/hero/hero_gif.gif' : '/images/hero/hero_gif.gif'}
+                  src={heroGif}
                   alt="hero visual"
                   style={{
                     width: '100%',
