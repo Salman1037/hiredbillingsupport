@@ -11,6 +11,14 @@ import About from './Pages/About';
 import ContactForm from './Pages/Contact';
 import Neurologybillingservices from './Pages/specialitiespage/neurology-billing-services';
 import CardiologyBillingServices from './Pages/specialitiespage/cardiology-billing-services';
+import EndocrinologyBillingServices from './Pages/specialitiespage/endocrinology-billing';
+import PodiatryBillingServices from './Pages/specialitiespage/podiatry-billing';
+import OrthopedicBillingServices from './Pages/specialitiespage/orthopedic-billing';
+import ObgynBillingServices from './Pages/specialitiespage/obgyn-billing';
+import PsychiatryBillingServices from './Pages/specialitiespage/psychiatry-billing';
+import NephrologyBillingServices from './Pages/specialitiespage/nephrology-billing';
+import Casestudy from './Pages/casestudy';
+
 
 
 
@@ -23,13 +31,21 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/medical" element={<Medical />} />
           <Route path="/dental" element={<Dental />} />
-          <Route path="/rcm" element={<RcmSection />} />
+          <Route path="/rcm-management" element={<RcmSection />} />
           <Route path="/insurance" element={<Insurance />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/neurology-billing" element={<Neurologybillingservices />} />
           <Route path="/cardiology-billing" element={<CardiologyBillingServices />} />
+          <Route path="/endocrinology-billing" element={<EndocrinologyBillingServices />} />
+          <Route path="/podiatry-billing" element={<PodiatryBillingServices />} />
+          <Route path="/orthopedic-billing" element={<OrthopedicBillingServices />} />
+          <Route path="/obgyn-billing" element={<ObgynBillingServices />} />
+          <Route path="/psychiatry-billing" element={<PsychiatryBillingServices />} />
+          <Route path="/nephrology-billing" element={<NephrologyBillingServices />} />
+          <Route path="/case-study" element={<Casestudy />} />
+
         </Routes>
         <Footer />
       </div>

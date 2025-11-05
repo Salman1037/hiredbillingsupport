@@ -202,7 +202,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="cardiology-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="cardiology-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -220,7 +220,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="endocrinology-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="endocrinology-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -238,7 +238,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="podiatry-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="podiatry-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -256,7 +256,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="orthopedic-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="orthopedic-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -274,7 +274,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="obgyn-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="obgyn-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -292,7 +292,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="psychiatry-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="psychiatry-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -310,7 +310,7 @@ function Header() {
                                       </a>
                                     </div>
                                     <div className="col-lg-3 col-md-6 col-sm-6">
-                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="nephrology-billing.php">
+                                      <a className="iconbox_block_2 d-block p-3 rounded text-center" href="nephrology-billing">
                                         <span className="iconbox_icon mb-2 mx-auto" style={{ 
                                           width: '50px', 
                                           height: '50px', 
@@ -368,7 +368,7 @@ function Header() {
                     </button>
                   </li>
                   <li className="d-none d-lg-block">
-                    <a className="btn btn-primary" href="contact.php" style={{
+                    <a className="btn btn-primary" href="contact" style={{
                       background: 'linear-gradient(90deg, #00BFA6 0%, #0091EA 100%)',
                       border: 'none',
                       borderRadius: '25px',
@@ -446,7 +446,7 @@ function Header() {
                 </div>
               </li>
               <li className="mt-3">
-                <a className="btn btn-primary w-100" href="contact.php" style={{
+                <a className="btn btn-primary w-100" href="contact" style={{
                   background: 'linear-gradient(90deg, #00BFA6 0%, #0091EA 100%)',
                   border: 'none',
                   borderRadius: '25px',
