@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bannerImage from "../../../assets/images/hero/Dental-banner.jpg"; // ✅ Import your local hero image
+import bannerImage from "../../../assets/images/hero/Medical-banner.jpg"; // ✅ Import your local hero image
 
-const DentalHero = () => {
+const MedicalHero = () => {
   return (
     <section
       className="hero-section text-dark d-flex align-items-center position-relative"
@@ -11,8 +11,8 @@ const DentalHero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center right",
         height: "100vh",
-        paddingTop: "140px", // ✅ Add top space to avoid header overlap
-        paddingBottom: "80px", // ✅ Balanced bottom padding
+        paddingTop: "140px", // ✅ Prevent text from hiding behind header
+        paddingBottom: "80px",
       }}
     >
       {/* Overlay for better text visibility */}
@@ -28,6 +28,7 @@ const DentalHero = () => {
         <div className="row">
           <div className="col-lg-7">
             <div className="pe-lg-4">
+              {/* Top Small Text */}
               <div className="mb-3">
                 <small
                   style={{
@@ -36,10 +37,11 @@ const DentalHero = () => {
                     color: "#00BFA6",
                   }}
                 >
-                  Rates from $7/Hr
+                  Started From $7/Hr
                 </small>
               </div>
 
+              {/* Main Heading */}
               <h1
                 className="fw-bold mb-4"
                 style={{
@@ -51,15 +53,17 @@ const DentalHero = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Remote Dental VAs that Keep Your Charts Current
+                Hire Remote Medical Staff with HBS
               </h1>
 
+              {/* Description Text */}
               <p className="lead mb-4 text-dark">
-                Dependable, HIPAA-aligned dental VAs who work in Dentrix, Open
-                Dental, and Eaglesoft—reducing overhead and keeping your practice
-                running smoothly, so you can stay focused on patient care.
+                Boost your practice with HIPAA-aligned virtual medical talent
+                from HBS. Cut hiring costs by up to 70%, save staff hours, and
+                scale operations fast.
               </p>
 
+              {/* CTA Button */}
               <Link
                 to="/contact"
                 className="btn btn-success btn-lg"
@@ -84,4 +88,4 @@ const DentalHero = () => {
   );
 };
 
-export default DentalHero;
+export default MedicalHero;

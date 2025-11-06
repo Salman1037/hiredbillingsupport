@@ -1,5 +1,4 @@
 import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const ContactForm = () => {
@@ -7,60 +6,96 @@ const ContactForm = () => {
     <section
       className="bg-white"
       style={{
-        paddingTop: "120px", 
-        paddingBottom: "80px",
+        paddingTop: "180px", // ✅ Adjusted for fixed header
+        paddingBottom: "100px",
       }}
     >
       <Container>
         <Row className="justify-content-center">
           <Col lg={8} md={10}>
-            <div className="p-5 shadow-sm rounded-4 bg-light">
+            <div
+              className="p-5 shadow-lg rounded-4"
+              style={{
+                backgroundColor: "#ffffff",
+                border: "1px solid #e8e8e8",
+                boxShadow: "0 8px 25px rgba(0, 0, 0, 0.08)",
+              }}
+            >
               <h2
-                className="fw-bold text-center mb-4"
-                style={{ color: "#0e1b50" }}
+                className="fw-bold text-center mb-3"
+                style={{
+                  color: "#0b155b",
+                  fontSize: "2rem",
+                  letterSpacing: "0.5px",
+                }}
               >
-                Get In Touch!
+                Get In Touch
               </h2>
+
+              <p
+                className="text-center text-muted mb-5"
+                style={{ fontSize: "1rem" }}
+              >
+                Have a question or need help? Fill out the form below and our
+                HBS team will get back to you shortly.
+              </p>
 
               <Form>
                 {/* Name */}
-                <Form.Group className="mb-3" controlId="formName">
+                <Form.Group className="mb-4" controlId="formName">
                   <Form.Control
                     type="text"
-                    placeholder="Your name"
-                    className="rounded-pill py-3 border-0 shadow-sm"
-                    style={{ backgroundColor: "#fff" }}
+                    placeholder="Your Name"
+                    className="rounded-pill px-4 py-3 border-success shadow-sm"
+                    style={{
+                      backgroundColor: "#fff",
+                      border: "1px solid #00b14f",
+                      fontSize: "1rem",
+                    }}
                   />
                 </Form.Group>
 
                 {/* Email */}
-                <Form.Group className="mb-3" controlId="formEmail">
+                <Form.Group className="mb-4" controlId="formEmail">
                   <Form.Control
                     type="email"
-                    placeholder="Your email"
-                    className="rounded-pill py-3 border-0 shadow-sm"
-                    style={{ backgroundColor: "#fff" }}
+                    placeholder="Email Address"
+                    className="rounded-pill px-4 py-3 border-success shadow-sm"
+                    style={{
+                      backgroundColor: "#fff",
+                      border: "1px solid #00b14f",
+                      fontSize: "1rem",
+                    }}
                   />
                 </Form.Group>
 
                 {/* Subject */}
-                <Form.Group className="mb-3" controlId="formSubject">
+                <Form.Group className="mb-4" controlId="formSubject">
                   <Form.Control
                     type="text"
                     placeholder="Subject"
-                    className="rounded-pill py-3 border-0 shadow-sm"
-                    style={{ backgroundColor: "#fff" }}
+                    className="rounded-pill px-4 py-3 border-success shadow-sm"
+                    style={{
+                      backgroundColor: "#fff",
+                      border: "1px solid #00b14f",
+                      fontSize: "1rem",
+                    }}
                   />
                 </Form.Group>
 
                 {/* Message */}
-                <Form.Group className="mb-4" controlId="formMessage">
+                <Form.Group className="mb-5" controlId="formMessage">
                   <Form.Control
                     as="textarea"
-                    rows={4}
-                    placeholder="Your message (optional)"
-                    className="rounded-4 p-3 border-0 shadow-sm"
-                    style={{ backgroundColor: "#fff", resize: "none" }}
+                    rows={5}
+                    placeholder="Your Message"
+                    className="rounded-4 px-4 py-3 border-success shadow-sm"
+                    style={{
+                      backgroundColor: "#fff",
+                      border: "1px solid #00b14f",
+                      resize: "none",
+                      fontSize: "1rem",
+                    }}
                   />
                 </Form.Group>
 
@@ -68,13 +103,17 @@ const ContactForm = () => {
                 <div className="text-center">
                   <Button
                     type="submit"
-                    className="rounded-pill px-5 py-3 fw-semibold border-0"
+                    className="w-100 text-white fw-semibold rounded-pill py-3 shadow-sm"
                     style={{
-                      backgroundColor: "#00b4d8", // HBS blue
-                      color: "#fff",
+                      background:
+                        "linear-gradient(90deg, #00b14f 0%, #0cc4d9 100%)",
+                      border: "none",
+                      fontSize: "1rem",
+                      letterSpacing: "0.5px",
+                      boxShadow: "0 4px 12px rgba(0, 177, 79, 0.3)",
                     }}
                   >
-                    Submit
+                    Send Message
                   </Button>
                 </div>
               </Form>

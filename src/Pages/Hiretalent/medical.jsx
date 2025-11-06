@@ -1,6 +1,3 @@
-import React from 'react';
-
-import WhyHireWithWorkdeskVA from '../../components/WhyHire';
 
 import Contact from '../../components/Contact';
 import Ourcertification from '../../components/Ourcertification';
@@ -13,17 +10,21 @@ import MedicalVA from '../../components/Hire/medicalva';
 import Faq from '../../components/Hire/Faq';
 import HBSAgencies from '../../components/Hire/HBSAgencies';
 import Emr from '../../components/Hire/Emr';
+import MedicalHero from '../../components/Hire/Dental/MedicalHero';
 
 function Medical() {
   return (
     <>
-      <WhyHireWithWorkdeskVA />
+      <MedicalHero />
+    
       <IconsService />
-      <Medicalcore />
-      <SuccessNumber />
-      <Medicalspecialties />
-      <MedicalVA />
       <Readygoal />
+    
+      <Medicalspecialties />
+        <SuccessNumber />
+   <MedicalVA />
+         <Medicalcore />
+     
       <Ourcertification />
       <Faq/>
       <HBSAgencies/>

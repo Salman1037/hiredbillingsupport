@@ -18,6 +18,7 @@ import ObgynBillingServices from './Pages/specialitiespage/obgyn-billing';
 import PsychiatryBillingServices from './Pages/specialitiespage/psychiatry-billing';
 import NephrologyBillingServices from './Pages/specialitiespage/nephrology-billing';
 import Casestudy from './Pages/casestudy';
+import ArticleFacilitiesPage from './Pages/article-28-facilities';
 
 
 
@@ -45,6 +46,8 @@ function App() {
           <Route path="/psychiatry-billing" element={<PsychiatryBillingServices />} />
           <Route path="/nephrology-billing" element={<NephrologyBillingServices />} />
           <Route path="/case-study" element={<Casestudy />} />
+          <Route path="/article-28-facilities" element={<ArticleFacilitiesPage />} />
+          
 
         </Routes>
         <Footer />

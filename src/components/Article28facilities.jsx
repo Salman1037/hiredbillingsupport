@@ -1,7 +1,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import bannerImage from "../assets/images/backgrounds/Pricing.jpg"; // ✅ Updated banner image
+import bannerImage from "../assets/images/backgrounds/article-banner.jpg"; // ✅ Updated banner image
 
-const PricingHero = () => {
+const ArticleFacilities = () => {
   return (
     <section
       className="hero-section text-dark d-flex align-items-center position-relative"
@@ -39,8 +39,9 @@ const PricingHero = () => {
               textShadow: "0 1px 2px rgba(0,0,0,0.1)",
             }}
           >
-            Pricing
+            Article 28
           </h2>
+          <h2>Facilities</h2>
 
         
         </div>
@@ -81,4 +82,4 @@ const PricingHero = () => {
   );
 };
 
-export default PricingHero;
+export default ArticleFacilities;

@@ -10,8 +10,8 @@ const HeroSection = () => {
         backgroundSize: "cover",
         backgroundPosition: "center right",
         height: "100vh",
-        overflow: "hidden",
-        marginTop: "60px",
+        paddingTop: "140px", // ✅ Add top space to avoid header overlap
+        paddingBottom: "80px", // ✅ Balanced bottom padding
       }}
       id="hero"
     >

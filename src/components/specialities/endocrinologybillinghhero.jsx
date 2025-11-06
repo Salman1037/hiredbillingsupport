@@ -7,11 +7,11 @@ const HeroSection = () => {
       className="hero-section text-dark d-flex align-items-center position-relative"
       style={{
         backgroundImage: `url(${bannerImage})`,
-        backgroundSize: "cover",
+       backgroundSize: "cover",
         backgroundPosition: "center right",
         height: "100vh",
-        overflow: "hidden",
-        marginTop: "60px",
+        paddingTop: "140px", // ✅ Add top space to avoid header overlap
+        paddingBottom: "80px", // ✅ Balanced bottom padding
       }}
       id="hero"
     >
