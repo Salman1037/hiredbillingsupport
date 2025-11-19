@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import heroGif from '../assets/images/hero/hero_gif.gif';
 
 const heroTexts = [
-  'Remote Medical & Dental VAs',
+  'Remote Medical & Dental Talent',
   'Optimized RCM Solutions',
   'Comprehensive Audit Services',
 ];
@@ -206,10 +206,14 @@ const Squares = ({
 function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating] = useState(false);
+  const [headerPad, setHeaderPad] = useState('9px');
   // const isRemoteStaffing = activeIndex === heroTexts.length - 1;
 
   return (
-    <section className="hero_section" style={{ position: 'relative', overflow: 'hidden' }}>
+    <section
+      className="hero_section"
+      style={{ position: 'relative', overflow: 'hidden', paddingTop: headerPad }}
+    >
       {/* Animated Squares Background */}
       <div style={{ 
         position: 'absolute', 
@@ -237,7 +241,7 @@ function Hero() {
             <div className="hero_content">
               <div className="hero_badge">
                 <i className="fas fa-dollar-sign"></i>
-                <span>Starting at $7/hour</span>
+                <span>Starting at $10/hour</span>
               </div>
               
               <h1 className="hero_title">
@@ -252,12 +256,12 @@ function Hero() {
               </h1>
               
               <p className="hero_description">
-                Eligibility, recalls, prior auths, claim follow-ups, and scribing—done inside your EHR/EDR.
+                Eligibility, recalls, prior auths, claim follow-ups, and scribing—done inside your EHR by remote talent.
               </p>
               
               <div className="hero_buttons">
                 <Link to="/contact" className="btn btn-primary">
-                  <span className="btn_label" data-text="FREE RCM DEMO">FREE RCM DEMO</span>
+                  <span className="btn_label" data-text="Hire Talent">Hire Talent</span>
                   <i className="btn_icon fas fa-arrow-right"></i>
                 </Link>
                 <Link to="/services" className="btn btn-outline-light">

@@ -1,139 +1,426 @@
-import HeroSection from "../../components/specialities/cardiologyhero";
-import billingImg from '../../assets/images/hero/Cardiology-2.jpg';
-import billingImg2 from '../../assets/images/hero/Cardiology-1.jpg';
-import StatsSection from "../../components/Hire/Rcm/StatsSection";
-import Emr from '../../components/Hire/Emr';
-import Contact from "../../components/Contact";
-import TestimonialsSection from "../../components/TestimonialsSection";
+
+import cardiologyBg  from "../../assets/images/hero/Cardiology-banner.jpg";
+import { Container, Row, Col,Card,Button  } from "react-bootstrap";
+import CardiologyImg from "../../assets/images/hero/banner1.jpg";
+import GetStartedImg from "../../assets/images/hero/get-started.png";  
+
+import { FaCheckCircle, FaChartLine, FaShieldAlt, FaClock } from "react-icons/fa";
+import cardioImg   from "../../assets/images/hero/banner1.jpg"; // <-- your imported image
+import TestimonialSection from "../../components/specialities/testimonials";
+const features = [
+  {
+    title: "Expert Cardiology Coding & Mapping",
+    text: "HBS provides comprehensive mapping of cardiology-specific procedures and diagnoses, ensuring coding accuracy and compliance for every claim.",
+  },
+  {
+    title: "AI-Driven Code Scrubbing & Validation",
+    text: "Our remote team uses advanced AI tools to catch errors and validate codes before submission, reducing rejections and ensuring clean, accurate claims for your cardiology practice.",
+  },
+  {
+    title: "Specialized Cardiology Billing Support",
+    text: "HBS offers dedicated remote billing experts who understand the unique needs of cardiology practices, providing tailored guidance and fast resolution to billing issues.",
+  },
+  {
+    title: "Seamless EHR Integration",
+    text: "We integrate with your cardiology EHRs for direct patient data transfer, reducing manual entry and minimizing errors for a more efficient billing workflow.",
+  },
+  {
+    title: "Custom Fee Schedule Management",
+    text: "HBS manages customized fee schedules for all cardiology procedures, ensuring optimal billing rates and helping your practice stay competitive and profitable.",
+  },
+  {
+    title: "Scalable Remote Staffing Solutions",
+    text: "Whether you’re a small, mid-sized, or multi-location cardiology group, HBS’s remote staffing and billing services are fully scalable and customizable to meet your needs, ensuring long-term success.",
+  },
+];
 
 
-function CardiologyBillingServices() {
+
+
+const CardiologyBilling = () => {
   return (
     <>
-    <HeroSection />
-  <section className="medical-desc">
-  <div className="medical-header">
-    <div className="container">
-      <h2>Optimize Practice Revenue with Cardiology Medical Billing</h2>
-      <p>HBS cardiology billing services empower your specialty practice to maximize
-        revenue without changing your operations. Increase profitability and ensure
-        financial stability with our expert billing solutions.</p>
-      <div className="decor">
-        <span className="dots">...</span>
-        <span className="line" />
-      </div>
-    </div>
-  </div>
-
-  <div className="container medical-content">
-    <div className="medical-text">
-    
-
-      <p>
-        Cardiology practices are highly complex, requiring an experienced billing
-        team to obtain proper reimbursement. Your practice can lose tons of revenue
-        without professional coders and billers. Our cardiology billing resources
-        are used to coding for everything from stent replacements to pacemakers and
-        coronary interventions. Similarly, there can be a high cost of keeping an
-        in-house billing staff. Thus, outsourcing with a dedicated cardiology billing
-        firm like HBS is a must.
+      <section
+        className="hero"
+        style={{
+          backgroundImage: `url(${cardiologyBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          padding: "70px 0",
+          color: "#fff",
+          position: "relative",
+          fontFamily: "Arial, sans-serif",
+          minHeight: "500px",
+        }}
+      >
+       <div className="container">
+  <div className="row align-items-start">
+    <div className="col-md-6">
+      <h1
+        className="fw-bold"
+        style={{
+          fontSize: "48px",
+          lineHeight: "1.2",
+          marginBottom: "20px",
+          color: "#ffffff",
+        }}
+      >
+        Cardiology Billing & Remote Staffing by HBS
+      </h1>
+      <p
+        style={{
+          fontSize: "20px",
+          lineHeight: "1.8",
+          marginBottom: "30px",
+          color: "#f0f0f0",
+        }}
+      >
+        Access top-tier remote cardiology billers, coders, and AR specialists with HBS. Lower costs, accelerate reimbursements, and boost billing accuracy for your practice.
       </p>
-
-      <p>
-        Optimum billing and revenue cycle billing with Enterprise HBS — our team
-        will work on clean claim submissions on your billing software so your
-        financial outcomes are maximized and your practice survives.
-      </p>
-    </div>
-
-    <div className="medical-image-wrap">
-      <img src={billingImg} alt="Cardiology Billing" className="medical-image" />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-  </div>
-</section>
-  <StatsSection />
-
-   <section className="medical-desc py-5 bg-white">
-      {/* Content Section */}
-      <div className="container">
-        <div className="row align-items-center gy-4">
-          {/* Image Left */}
-         <div className="col-lg-6 d-flex justify-content-center">
-  <div className="position-relative" style={{ maxWidth: "420px" }}>
-    <img
-      src={billingImg2}
-      alt="Cardiology Billing"
-      className="img-fluid rounded shadow"
-      style={{ width: "100%", height: "auto", objectFit: "cover" }}
-    />
-    <div
-      className="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-between align-items-center"
-      style={{ opacity: 0.1 }}
-      aria-hidden="true"
-    >
-      <span
-        className="bg-warning rounded-circle"
-        style={{ width: "10px", height: "10px" }}
-      ></span>
-      <span
-        className="bg-warning rounded-circle"
-        style={{ width: "10px", height: "10px" }}
-      ></span>
-      <span
-        className="bg-warning rounded-circle"
-        style={{ width: "10px", height: "10px" }}
-      ></span>
-      <span
-        className="bg-warning rounded-circle"
-        style={{ width: "10px", height: "10px" }}
-      ></span>
+      <button
+        className="btn"
+        style={{
+          background: "#5CBDAA",  // modern teal
+          color: "#fff",
+          fontWeight: "bold",
+          fontSize: "18px",
+          padding: "14px 35px",   // taller and wider
+          borderRadius: "12px",   // rounded corners
+          border: "none",
+          transition: "all 0.3s ease",
+        }}
+        onMouseOver={(e) => (e.target.style.background = "#5CBDAA")}
+        onMouseOut={(e) => (e.target.style.background = "#5CBDAA")}
+      >
+        REQUEST DEMO
+      </button>
     </div>
   </div>
 </div>
 
 
-          {/* Text Right */}
-          <div className="col-lg-6">
-            <h4 className="fw-bold mb-3">
-              Seamless Cardiology Billing Solutions with HBS
-            </h4>
+        {/* FLOATING FORM */}
+        <div
+          className="floating-form"
+          style={{
+            background: "#54A1D9",
+            borderRadius: "25px", // ⬅️ fully rounded
+            padding: "35px 30px", // ⬅️ more padding for spacious feel
+            boxShadow: "0px 10px 30px rgba(0,0,0,0.25)", // ⬅️ smoother shadow
+            width: "400px", // ⬅️ slightly wider
+            height: "600px", // ⬅️ taller form
+            position: "absolute",
+            right: "5%",
+            top: "380px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+          }}
+        >
+          <p
+            className="form-title"
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              color: "#ffffff",
+              marginBottom: "10px",
+            }}
+          >
+            Watch a Cardiology Billing Demo
+          </p>
 
-            <p className="mb-3">
-              We have vast experience in cardiology coding, so your claims are
-              submitted cleanly and accurately, minimizing the chances of
-              denials. That allows your cardiologists to focus on what they do
-              best — taking care of patients — while we handle the revenue
-              cycle. By enabling timely reimbursements through our efficient
-              billing and coding processes, we help improve the performance and
-              quality of your practice.
-            </p>
+          <p style={{ fontSize: "14px", color: "#ffffff", marginBottom: "20px" }}>
+            Discover how HBS remote staffing boosts billing revenue for cardiology practices.
+          </p>
+
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="First Name*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="Last Name*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="Phone Number*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-4 py-3"
+            placeholder="Email*"
+            style={{ borderRadius: "12px" }}
+          />
+
+          <button
+            className="submit-btn mt-auto"
+            style={{
+              background: "#5CBDAA",
+              border: "none",
+              width: "100%",
+              padding: "15px",
+              borderRadius: "15px",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "16px",
+              transition: "all 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.background = "#5CBDAA")}
+            onMouseOut={(e) => (e.target.style.background = "#5CBDAA")}
+          >
+            BOOK YOUR DEMO
+          </button>
+        </div>
+      </section>
+
+      {/* CONTENT SECTION */}
+      <section
+        className="content-section"
+        style={{
+          paddingTop: "70px",
+          paddingBottom: "100px",
+        }}
+      >
+       <div className="container">
+  <div className="row">
+    <div className="col-md-7">
+      <h2 className="fw-bold" style={{ fontSize: "42px", marginBottom: "25px" }}>
+        Remote Cardiology Billing Solutions by HBS
+      </h2>
+      <p
+        style={{
+          fontSize: "22px",
+          fontWeight: 500,
+          lineHeight: "1.8",
+          marginTop: "15px",
+        }}
+      >
+        HBS delivers complete remote revenue cycle management for cardiology practices. Our expert team handles every aspect of billing: claim creation, submission, follow-up, denial management, appeals, payment posting, and reporting—so you can focus on patient care while we optimize your financial outcomes.
+      </p>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+
+       <section className="py-5" style={{ background: "#f4f6fb" }}>
+      <div className="container">
+
+        {/* -------------------- ROW 1 -------------------- */}
+        <div className="row align-items-start mb-4">
+          {/* LEFT CONTENT */}
+          <div className="col-md-7">
+            <h2 className="fw-bold mb-3">Remote Cardiology Billing Expertise</h2>
 
             <p>
-              Using HBS for your cardiology medical billing services, you can
-              enhance your business workflow and increase productivity in your
-              practice. Our trained professionals minimize claim denials,
-              ensuring a steady increase in your revenue. HBS provides
-              comprehensive revenue cycle management services that help
-              cardiology specialists thrive in today’s dynamic healthcare
-              environment. We streamline your workflows, optimize your
-              cardiology EHR systems, and deliver insights to keep your practice
-              performing at its best.
+              HBS understands the critical importance of accurate preauthorization and billing for cardiac procedures. Our remote team follows best practices to prevent authorization denials and maximize revenue:
             </p>
+
+            <ul style={{ lineHeight: "1.8" }}>
+              <li>
+                <strong>Expert Remote Team:</strong> Our staff is highly trained in CMS codes and modifiers for precise coding.
+              </li>
+              <li>
+                <strong>Advanced ICD-10 Coding:</strong> We utilize combination codes and specialized training for cardiology billing.
+              </li>
+              <li>
+                <strong>Compliance Assurance:</strong> Our remote coders and clinicians stay current with evolving billing guidelines.
+              </li>
+              <li>
+                <strong>Procedure-Based Coding:</strong> We ensure billing accuracy by coding exact procedures, not just symptoms.
+              </li>
+            </ul>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="col-md-5 text-center">
+            <img
+              src={cardioImg}
+              alt="Cardiology Billing"
+              className="img-fluid rounded"
+              style={{ maxWidth: "380px", height: "auto" }}
+            />
           </div>
         </div>
+
+        {/* -------------------- ROW 2 -------------------- */}
+        <div className="row align-items-start mt-5">
+
+          {/* LEFT ICON GRID 2×2 EXACTLY LIKE CUREMD */}
+          <div className="col-md-7">
+            <div className="row text-center">
+
+              <div className="col-6 mb-4">
+                <FaShieldAlt size={35} color="#005f85" />
+                <h6 className="mt-2">98% Clean Claim Rate</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaCheckCircle size={35} color="#005f85" />
+                <h6 className="mt-2">100% Compliance</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaChartLine size={35} color="#005f85" />
+                <h6 className="mt-2">30% Revenue Increase</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaClock size={35} color="#005f85" />
+                <h6 className="mt-2">3× Faster Payments</h6>
+              </div>
+
+            </div>
+          </div>
+
+          {/* RIGHT TEXT UNDER THE IMAGE */}
+          <div className="col-md-5">
+            <h3 className="fw-bold">
+              AI-Enhanced Remote Billing <br /> for Cardiology Practices
+            </h3>
+            <p className="mt-3">
+              HBS leverages AI-powered billing platforms to simplify and automate cardiology billing, reducing manual errors and streamlining claims processing. Our technology-driven approach lowers denial rates and speeds up reimbursements for your practice.
+            </p>
+            <p>
+              With HBS remote staffing, your team can focus on patient care while we ensure your billing is optimized for a stable, reliable revenue stream.
+            </p>
+            <a href="#" className="text-primary" style={{ fontWeight: "500" }}>
+              Learn More
+            </a>
+          </div>
+
+        </div>
+
       </div>
     </section>
-    <Emr />
-    <TestimonialsSection />
-    <Contact />
+
+
+     <section style={{ marginTop: "120px" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* LEFT IMAGE */}
+          <Col md={6} className="mb-4 mb-md-0">
+            <img
+              src={CardiologyImg}
+              alt="Cardiology Billing"
+              className="img-fluid"
+              style={{
+                borderRadius: "25px",
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
+            />
+          </Col>
+
+          {/* RIGHT CONTENT */}
+          <Col md={6}>
+            <h2 className="fw-bold" style={{ fontSize: "36px" }}>
+              Cardiology Medical Billing with HBS
+            </h2>
+
+            <p style={{ fontSize: "18px", lineHeight: "1.7" }}>
+              Discover how HBS remote staffing can boost your cardiology practice’s profitability and minimize billing errors. Explore our full suite of remote cardiology billing services tailored for your needs.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+
+
+    <section style={{ background: "#f5f7fb", padding: "70px 0", marginTop: "80px" }}>
+      <Container>
+
+        {/* HEADING */}
+        <div className="text-center mb-5">
+          <h2 className="fw-bold" style={{ fontSize: "32px" }}>
+            Smart, Fast, Reliable Remote Billing Features <br /> for Cardiology Practices
+          </h2>
+
+          <p className="mt-3" style={{ fontSize: "18px", maxWidth: "750px", margin: "0 auto" }}>
+            HBS combines advanced tools and expert remote support to simplify complex cardiology billing, ensuring your claims are accurate and timely every time.
+          </p>
+        </div>
+
+        {/* FEATURES GRID */}
+        <Row>
+          {features.map((item, index) => (
+            <Col md={6} className="mb-4" key={index}>
+              <Card
+                className="h-100 shadow-sm"
+                style={{
+                  borderRadius: "20px",
+                  padding: "25px",
+                  background: "#fff",
+                  border: "none",
+                }}
+              >
+                <Card.Body>
+                  <h5 className="fw-bold mb-3">{item.title}</h5>
+                  <p style={{ lineHeight: "1.7", fontSize: "16px" }}>{item.text}</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+
+      </Container>
+    </section>
+
+     <section
+      style={{
+        background: "#5DBFA7", // blue background similar to screenshot
+        padding: "70px 0",
+        marginTop: "60px",
+      }}
+    >
+      <Container>
+        <Row className="align-items-center">
+
+          {/* LEFT CONTENT */}
+          <Col md={6} className="text-white">
+            <h2 className="fw-bold mb-4">Get Started with HBS</h2>
+
+            <p style={{ lineHeight: "1.7", fontSize: "17px" }}>
+              Experience seamless billing operations with HBS’s advanced AI solutions and remote staffing, designed specifically for cardiology practices. Our innovative approach streamlines billing, ensures precision in claims, and maximizes revenue—empowering you to focus on exceptional patient care. Book a demo now to see how our remote cardiology billing services can elevate your practice.
+            </p>
+
+            <Button
+              style={{
+                background: "#54A1D9",
+                border: "none",
+                padding: "10px 25px",
+                borderRadius: "6px",
+                marginTop: "20px",
+                fontSize: "16px",
+                fontWeight: "500",
+              }}
+            >
+              Schedule a Demo
+            </Button>
+          </Col>
+
+          {/* RIGHT IMAGE */}
+          <Col md={6} className="text-center mt-4 mt-md-0">
+            <img
+              src={GetStartedImg}
+              alt="Get Started"
+              className="img-fluid"
+              style={{ maxWidth: "350px" }}
+            />
+          </Col>
+
+        </Row>
+      </Container>
+    </section>
+
+    <TestimonialSection />
     </>
   );
-}
+};
 
-export default CardiologyBillingServices;
+export default CardiologyBilling;

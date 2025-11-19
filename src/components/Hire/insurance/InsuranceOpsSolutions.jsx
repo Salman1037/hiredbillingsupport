@@ -83,7 +83,7 @@ const InsuranceOpsSolutions = () => {
               boxShadow: "0 3px 8px rgba(0,0,0,0.1)",
             }}
           >
-            PRICING FROM $7/HR
+            PRICING FROM $10/HR
           </Button>
         </div>
       </Container>

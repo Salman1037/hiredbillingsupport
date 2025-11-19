@@ -1,119 +1,110 @@
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import bannerImage from "../../assets/images/hero/Psychiatry-1.jpg"; // You can update this to a psychiatry banner if needed
 
-const HeroSection = () => {
+import { Link } from "react-router-dom";
+import bannerImage from "../../assets/images/hero/banner/Psychiatry-banner.jpg";
+
+const PsychiatryBillingHero = () => {
   return (
     <section
-      className="hero-section text-dark d-flex align-items-center position-relative"
+      className="hero-section d-flex align-items-center position-relative"
       style={{
         backgroundImage: `url(${bannerImage})`,
-      backgroundSize: "cover",
-        backgroundPosition: "center right",
-        height: "100vh",
-        paddingTop: "140px", // ✅ Add top space to avoid header overlap
-        paddingBottom: "80px", // ✅ Balanced bottom padding
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "75vh",
+        paddingTop: "80px",
+        paddingBottom: "80px",
+        color: "#fff",
       }}
-      id="hero"
     >
-      {/* Overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-        }}
-      ></div>
+      <div className="container position-relative z-3">
+        <div className="row align-items-center">
+          <div className="col-lg-7 col-md-10 col-12">
+            <div className="pe-lg-4">
 
-      {/* Content */}
-      <div className="container position-relative" style={{ zIndex: 2 }}>
-        <div className="hero-content py-5">
-          {/* Subtitle / Heading */}
-          <h3
-            className="fw-bold slideinup"
-            style={{
-              color: "#112D55",
-              lineHeight: "1.3",
-              animationDelay: "0.2s",
-            }}
-          >
-            Recognized Success in Elevating{" "}
-            <span className="text-theme">
-              <br /> Psychiatry Medical Billing Services
-            </span>
-          </h3>
+              <div className="mb-3">
+                <small
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 600,
+                    letterSpacing: "0.3px",
+                  }}
+                >
+                  Starting From $10/Hr
+                </small>
+              </div>
 
-          {/* Description */}
-          <p
-            className="hero-text slideinup"
-            style={{
-              color: "#444",
-              maxWidth: "700px",
-              fontSize: "1.05rem",
-              margin: "1rem 0 1.5rem",
-              animationDelay: "0.6s",
-            }}
-          >
-            Our mental health billing services are designed to prevent revenue
-            leakages by ensuring accurate and timely claim submissions. With a
-            proven track record, we help providers maintain financial stability
-            and maximize their revenue potential.
-          </p>
+              {/* Heading */}
+              <h1
+                className="fw-bold mb-4"
+                style={{
+                  fontSize: "42px",
+                  lineHeight: "1.2",
+                  color: "#fff",
+                }}
+              >
+                Hire Remote Psychiatry Billing Experts with HBS
+              </h1>
 
-          {/* Button */}
-          <a
-            href="/schedule-a-demo/"
-            className="btn btn-lg px-5 shadow slideinup"
-            style={{
-              background: "linear-gradient(90deg, #00AEEF, #0072BC)",
-              color: "#fff",
-              border: "none",
-              borderRadius: "50px",
-              fontWeight: "600",
-              letterSpacing: "0.5px",
-              padding: "12px 36px",
-              transition: "all 0.3s ease-in-out",
-              animationDelay: "0.6s",
-              display: "inline-block",
-            }}
-            onMouseEnter={(e) =>
-              (e.target.style.background =
-                "linear-gradient(90deg, #0072BC, #005B9F)")
-            }
-            onMouseLeave={(e) =>
-              (e.target.style.background =
-                "linear-gradient(90deg, #00AEEF, #0072BC)")
-            }
-          >
-            <i className="fas fa-desktop me-2"></i> Schedule Demo
-          </a>
+              {/* Short Paragraph */}
+              <p
+                className="lead mb-4"
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "1.6",
+                  maxWidth: "650px",
+                }}
+              >
+                Accurate billing for mental health visits, therapy sessions, and medication management. Improve reimbursements with trusted remote staff.
+              </p>
+
+              <Link
+                to="/contact"
+                className="btn btn-lg"
+                style={{
+                  background: "#fff",
+                  borderRadius: "30px",
+                  padding: "12px 35px",
+                  fontWeight: "600",
+                  color: "#00A651",
+                  border: "none",
+                }}
+              >
+                Book a Consult →
+              </Link>
+
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Animation Styles */}
       <style>
         {`
-          @keyframes slideinup {
-            from { opacity: 0; transform: translate3d(0, 40px, 0); }
-            to { opacity: 1; transform: none; }
-          }
-
-          .slideinup {
-            animation: slideinup 1s ease-in-out forwards;
-          }
-
           @media (max-width: 992px) {
             .hero-section {
-              height: auto !important;
-              padding: 80px 0;
+              min-height: 65vh;
+              padding-top: 60px;
+              padding-bottom: 60px;
               text-align: center;
             }
-            .hero-content h3 {
-              font-size: 1.8rem;
+            .hero-section h1 {
+              font-size: 32px !important;
             }
-            .hero-content p {
-              font-size: 1rem;
+            .hero-section p {
+              font-size: 16px !important;
+            }
+          }
+
+          @media (max-width: 576px) {
+            .hero-section {
+              padding-top: 40px;
+              padding-bottom: 40px;
+            }
+            .hero-section h1 {
+              font-size: 26px !important;
+            }
+            .hero-section p {
+              font-size: 15px !important;
             }
           }
         `}
@@ -122,4 +113,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default PsychiatryBillingHero;

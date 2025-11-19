@@ -376,7 +376,7 @@
 //                       fontWeight: '600',
 //                       whiteSpace: 'nowrap'
 //                     }}>
-//                       <span className="btn_label" data-text="FREE RCM DEMO">FREE RCM DEMO</span>
+//                       <span className="btn_label" data-text="Hire Talent">Hire Talent</span>
 //                       <span className="btn_icon ms-2">
 //                         <i className="fa-solid fa-arrow-right" />
 //                       </span>
@@ -453,7 +453,7 @@
 //                   padding: '12px 25px',
 //                   fontWeight: '600'
 //                 }}>
-//                   FREE RCM DEMO <i className="fa-solid fa-arrow-right ms-2"></i>
+//                   Hire Talent <i className="fa-solid fa-arrow-right ms-2"></i>
 //                 </a>
 //               </li>
 //             </ul>
@@ -847,7 +847,7 @@
 //                       fontWeight: '600',
 //                       whiteSpace: 'nowrap'
 //                     }}>
-//                       <span className="btn_label" data-text="FREE RCM DEMO">FREE RCM DEMO</span>
+//                       <span className="btn_label" data-text="Hire Talent">Hire Talent</span>
 //                       <span className="btn_icon ms-2">
 //                         <i className="fa-solid fa-arrow-right" />
 //                       </span>
@@ -925,7 +925,7 @@
 //                   padding: '12px 25px',
 //                   fontWeight: '600'
 //                 }}>
-//                   FREE RCM DEMO <i className="fa-solid fa-arrow-right ms-2"></i>
+//                   Hire Talent <i className="fa-solid fa-arrow-right ms-2"></i>
 //                 </a>
 //               </li>
 //             </ul>
@@ -955,6 +955,33 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Set body padding to match header height so the hero/content sits directly below the fixed header
+  useEffect(() => {
+    const setBodyPadding = () => {
+      const headerEl = document.querySelector('.site_header_1');
+      if (!headerEl) return;
+      // offsetHeight includes top bar and main header
+      const h = headerEl.offsetHeight || 0;
+      document.body.style.paddingTop = `${h}px`;
+    };
+
+    setBodyPadding();
+    window.addEventListener('resize', setBodyPadding);
+
+    // Observe header changes (menu open/close, class changes) and update padding
+    let observer;
+    const headerEl = document.querySelector('.site_header_1');
+    if (headerEl && window.MutationObserver) {
+      observer = new MutationObserver(setBodyPadding);
+      observer.observe(headerEl, { attributes: true, childList: true, subtree: true });
+    }
+
+    return () => {
+      window.removeEventListener('resize', setBodyPadding);
+      if (observer) observer.disconnect();
+    };
+  }, []);
+
   return (
     <div>
       <style>{`
@@ -970,9 +997,8 @@ function Header() {
           transition: all 0.3s ease;
         }
 
-        body {
-          padding-top: 130px; /* Prevent overlap of content */
-        }
+        /* We'll set body padding dynamically from JS to match the header height. Default 0 so JS controls it. */
+        body { padding-top: 0; }
 
         .site_header_1.scrolled {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1005,6 +1031,27 @@ function Header() {
         .btn-primary:hover {
           opacity: 0.9;
         }
+
+        /* Mobile menu overlay/look */
+        .mobile_menu_wrapper {
+          background: #fff;
+          box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+          position: fixed;
+          top: 100%; /* overridden when opened via collapse class; we'll rely on Bootstrap collapse which adds show */
+          left: 0;
+          right: 0;
+          z-index: 998;
+        }
+
+        /* When mobile menu is shown, ensure it's scrollable and sized correctly */
+        .collapse.show .mobile_menu_wrapper {
+          max-height: calc(100vh - 70px);
+          overflow: auto;
+          top: 70px;
+        }
+
+        /* Make logo image responsive */
+        .site_logo img { max-width: 100%; height: auto; }
       `}</style>
 
       {/* Back To Top */}
@@ -1050,7 +1097,7 @@ function Header() {
               <div className="col-md-6 col-12">
                 <div className="social_links d-flex justify-content-center justify-content-md-end gap-3">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61560603176734&mibextid=wwXIfr&rdid=oyMBw5xfKzc6gwHp#"
                     className="text-white"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1059,7 +1106,7 @@ function Header() {
                     <i className="fab fa-facebook-f"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/hiredbillingsupport/"
                     className="text-white"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1068,7 +1115,7 @@ function Header() {
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/hiredbillingsupport/?igsh=MW1tMTV4cXIzMGRibg%3D%3D#"
                     className="text-white"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1275,7 +1322,7 @@ function Header() {
           <div className="row g-3">
             {/* Neurology Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/neurology-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/neurology-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E8F5E9', borderRadius: '50%', color: '#00BFA6' }}>
                   <i className="fa-solid fa-brain" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1285,7 +1332,7 @@ function Header() {
 
             {/* Cardiology Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/cardiology-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/cardiology-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E3F2FD', borderRadius: '50%', color: '#1976D2' }}>
                   <i className="fa-solid fa-heart-pulse" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1295,7 +1342,7 @@ function Header() {
 
             {/* Endocrinology Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/endocrinology-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/endocrinology-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#FFF3E0', borderRadius: '50%', color: '#FB8C00' }}>
                   <i className="fa-solid fa-syringe" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1305,7 +1352,7 @@ function Header() {
 
             {/* Podiatry Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/podiatry-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/podiatry-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#F3E5F5', borderRadius: '50%', color: '#8E24AA' }}>
                   <i className="fa-solid fa-shoe-prints" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1315,7 +1362,7 @@ function Header() {
 
             {/* Orthopedic Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/orthopedic-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/orthopedic-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E1F5FE', borderRadius: '50%', color: '#0288D1' }}>
                   <i className="fa-solid fa-bone" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1325,7 +1372,7 @@ function Header() {
 
             {/* OBGYN Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/obgyn-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/obgyn-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#FFFDE7', borderRadius: '50%', color: '#FBC02D' }}>
                   <i className="fa-solid fa-baby" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1335,7 +1382,7 @@ function Header() {
 
             {/* Psychiatry Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/psychiatry-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/psychiatry-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E8EAF6', borderRadius: '50%', color: '#3F51B5' }}>
                   <i className="fa-solid fa-user-injured" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1345,7 +1392,7 @@ function Header() {
 
             {/* Nephrology Billing */}
             <div className="col-lg-3 col-md-6 col-sm-6">
-              <a href="/nephrology-billing" className="iconbox_block_2 d-block p-3 rounded text-center">
+              <a href="/nephrology-billing-services" className="iconbox_block_2 d-block p-3 rounded text-center">
                 <span className="iconbox_icon mb-2 mx-auto" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#E0F7FA', borderRadius: '50%', color: '#00ACC1' }}>
                   <i className="fa-solid fa-kidneys" style={{ fontSize: '24px' }}></i>
                 </span>
@@ -1401,7 +1448,7 @@ function Header() {
                       fontWeight: '600',
                       whiteSpace: 'nowrap'
                     }}>
-                      <span className="btn_label" data-text="FREE RCM DEMO">FREE RCM DEMO</span>
+                      <span className="btn_label" data-text="Hire Talent">Hire Talent</span>
                       <span className="btn_icon ms-2">
                         <i className="fa-solid fa-arrow-right" />
                       </span>
@@ -1413,10 +1460,74 @@ function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation (unchanged) */}
+        {/* Mobile Navigation */}
         <div className="collapse d-lg-none" id="main_menu_dropdown">
           <div className="mobile_menu_wrapper p-3">
-            {/* ...existing mobile nav links... */}
+            <ul className="mobile_menu_list list-unstyled">
+              <li className="mb-2">
+                <a className="d-block py-2 text-decoration-none" data-bs-toggle="collapse" href="#mobileHireTalent" role="button" aria-expanded="false">
+                  Hire Talent <i className="fa-solid fa-chevron-down float-end"></i>
+                </a>
+                <div className="collapse" id="mobileHireTalent">
+                  <div className="ps-3">
+                    <a href="/medical" className="d-block py-2 text-decoration-none small">
+                      <i className="fa-solid fa-stethoscope me-2"></i> Medical
+                    </a>
+                    <a href="/dental" className="d-block py-2 text-decoration-none small">
+                      <i className="fa-solid fa-tooth me-2"></i> Dental
+                    </a>
+                    <a href="/insurance" className="d-block py-2 text-decoration-none small">
+                      <i className="fa-solid fa-shield-halved me-2"></i> Insurance
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li className="mb-2">
+                <a href="/rcm-management" className="d-block py-2 text-decoration-none">RCM Management</a>
+              </li>
+              <li className="mb-2">
+                <a className="d-block py-2 text-decoration-none" data-bs-toggle="collapse" href="#mobileSpecialities" role="button" aria-expanded="false">
+                  Specialities <i className="fa-solid fa-chevron-down float-end"></i>
+                </a>
+                <div className="collapse" id="mobileSpecialities">
+                  <div className="ps-3">
+                    <a href="/neurology-billing" className="d-block py-2 text-decoration-none small">Neurology Billing</a>
+                    <a href="/cardiology-billing" className="d-block py-2 text-decoration-none small">Cardiology Billing</a>
+                    <a href="/endocrinology-billing" className="d-block py-2 text-decoration-none small">Endocrinology Billing</a>
+                    <a href="/podiatry-billing" className="d-block py-2 text-decoration-none small">Podiatry Billing</a>
+                    <a href="/orthopedic-billing" className="d-block py-2 text-decoration-none small">Orthopedic Billing</a>
+                    <a href="/obgyn-billing" className="d-block py-2 text-decoration-none small">OB/GYN Billing</a>
+                    <a href="/psychiatry-billing" className="d-block py-2 text-decoration-none small">Psychiatry Billing</a>
+                    <a href="/nephrology-billing" className="d-block py-2 text-decoration-none small">Nephrology Billing</a>
+                  </div>
+                </div>
+              </li>
+              <li className="mb-2">
+                <a href="/pricing" className="d-block py-2 text-decoration-none">Pricing</a>
+              </li>
+              <li className="mb-2">
+                <a className="d-block py-2 text-decoration-none" data-bs-toggle="collapse" href="#mobileCompany" role="button" aria-expanded="false">
+                  Company <i className="fa-solid fa-chevron-down float-end"></i>
+                </a>
+                <div className="collapse" id="mobileCompany">
+                  <div className="ps-3">
+                    <a href="/about" className="d-block py-2 text-decoration-none small">About Us</a>
+                    <a href="/case-study" className="d-block py-2 text-decoration-none small">Case Study</a>
+                    <a href="/article-28-facilities" className="d-block py-2 text-decoration-none small">Article 28 Facilities</a>
+                    <a href="/contact" className="d-block py-2 text-decoration-none small">Contact</a>
+                  </div>
+                </div>
+              </li>
+              <li className="mt-3">
+                <a className="btn btn-primary w-100" href="/contact" style={{
+                  borderRadius: '25px',
+                  padding: '12px 25px',
+                  fontWeight: '600'
+                }}>
+                  Hire Talent <i className="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>

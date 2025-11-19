@@ -1,224 +1,426 @@
-import HeroSection from "../../components/specialities/obgynbillinghero";
-import billingImg from '../../assets/images/hero/macbook-Mac.png';
-import billingImg2 from '../../assets/images/hero/obgyn2.jpg';
-import billingImg3 from '../../assets/images/hero/obgyn1.jpg';
 
-import StatsSection from "../../components/Hire/Rcm/StatsSection";
-import Emr from '../../components/Hire/Emr';
-import Contact from "../../components/Contact";
-import TestimonialsSection from "../../components/TestimonialsSection";
+import cardiologyBg  from "../../assets/images/hero/Obgyn-banner.jpg";
+import { Container, Row, Col,Card,Button  } from "react-bootstrap";
+import CardiologyImg from "../../assets/images/hero/banner1.jpg";
+import GetStartedImg from "../../assets/images/hero/get-started.png";  
+
+import { FaCheckCircle, FaChartLine, FaShieldAlt, FaClock } from "react-icons/fa";
+import cardioImg   from "../../assets/images/hero/banner1.jpg"; // <-- your imported image
+import TestimonialSection from "../../components/specialities/testimonials";
+const features = [
+  {
+    title: "Expert OB/GYN Coding & Mapping",
+    text: "HBS provides comprehensive mapping of OB/GYN-specific procedures and diagnoses, ensuring coding accuracy and compliance for every claim.",
+  },
+  {
+    title: "AI-Driven Code Scrubbing & Validation",
+    text: "Our remote team uses advanced AI tools to catch errors and validate codes before submission, reducing rejections and ensuring clean, accurate claims for your OB/GYN practice.",
+  },
+  {
+    title: "Specialized OB/GYN Billing Support",
+    text: "HBS offers dedicated remote billing experts who understand the unique needs of OB/GYN practices, providing tailored guidance and fast resolution to billing issues.",
+  },
+  {
+    title: "Seamless EHR Integration",
+    text: "We integrate with your OB/GYN EHRs for direct patient data transfer, reducing manual entry and minimizing errors for a more efficient billing workflow.",
+  },
+  {
+    title: "Custom Fee Schedule Management",
+    text: "HBS manages customized fee schedules for all OB/GYN procedures, ensuring optimal billing rates and helping your practice stay competitive and profitable.",
+  },
+  {
+    title: "Scalable Remote Staffing Solutions",
+    text: "Whether you’re a small, mid-sized, or multi-location OB/GYN group, HBS’s remote staffing and billing services are fully scalable and customizable to meet your needs, ensuring long-term success.",
+  },
+];
 
 
-function Obgynbillingservices() {
+
+
+const ObgynBilling = () => {
   return (
     <>
-    <HeroSection />
-<section className="medical-desc">
-  {/* Main Content Section */}
-  <div className="container medical-content">
-    <div className="medical-text">
-      <h4>Avoid Revenue Loopholes with OB/GYN Medical Billing</h4>
-
-      <p>
-        Obstetricians and gynecologists have a heavy workload, ranging from prenatal care 
-        to complex surgical procedures. The process of OB/GYN billing and coding is complicated, 
-        and even a single mistake can lead to under-documentation, payment denials, and delayed payments. 
-        At HBS, we recognize that OB/GYN practitioners experience unique pressures when it comes 
-        to keeping up with the latest ICD updates, rapidly changing policy guidelines, and 
-        the delicate nature of this specialty.
-      </p>
-
-      <p>
-        Our team of expert OB/GYN medical billers maintains diligence in scrutinizing patient histories, 
-        diagnostic findings, laboratory results, physician documentation, and reports. 
-        We ensure every service performed by physicians is accurately authenticated and coded 
-        to prevent revenue loss and guarantee timely reimbursements.
-      </p>
-
-      <p>
-        HBS safeguards your income streams and helps maximize your cash flow through precision-driven 
-        OB/GYN billing processes. Depend on us to enhance your practice’s financial stability 
-        and streamline your revenue cycle management.
-      </p>
-
-      {/* Button */}
-      <a
-        href="/pricing/"
-        className="btn btn-lg px-5 shadow"
+      <section
+        className="hero"
         style={{
-          background: "linear-gradient(90deg, #00AEEF, #0072BC)",
+          backgroundImage: `url(${cardiologyBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          padding: "70px 0",
           color: "#fff",
-          border: "none",
-          borderRadius: "50px",
-          fontWeight: "600",
-          letterSpacing: "0.5px",
-          padding: "12px 36px",
-          transition: "all 0.3s ease-in-out",
-          display: "inline-block",
-          marginTop: "1rem",
+          position: "relative",
+          fontFamily: "Arial, sans-serif",
+          minHeight: "500px",
         }}
-        onMouseEnter={(e) =>
-          (e.target.style.background =
-            "linear-gradient(90deg, #0072BC, #005B9F)")
-        }
-        onMouseLeave={(e) =>
-          (e.target.style.background =
-            "linear-gradient(90deg, #00AEEF, #0072BC)")
-        }
       >
-        <i className="fas fa-desktop me-2"></i> Request Pricing
-      </a>
-    </div>
-
-    {/* Image Section */}
-    <div className="medical-image-wrap">
-      <img
-        src={billingImg}
-        alt="OB/GYN Medical Billing"
-        className="medical-image"
-      />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section className="medical-desc">
-  {/* Header Section */}
-  <div className="medical-header">
-    <div className="container">
-      <h2>Maximize Reimbursements with Expert OB/GYN Medical Billing</h2>
-      <p>
-        HBS helps OB/GYN specialty providers maximize revenue and boost overall collection rates. 
-        Our expert billing services ensure accurate coding and efficient claim submissions, 
-        leading to improved reimbursements and stronger financial outcomes.
+       <div className="container">
+  <div className="row align-items-start">
+    <div className="col-md-6">
+      <h1
+        className="fw-bold"
+        style={{
+          fontSize: "48px",
+          lineHeight: "1.2",
+          marginBottom: "20px",
+          color: "#ffffff",
+        }}
+      >
+        OB/GYN Billing & Remote Staffing by HBS
+      </h1>
+      <p
+        style={{
+          fontSize: "20px",
+          lineHeight: "1.8",
+          marginBottom: "30px",
+          color: "#f0f0f0",
+        }}
+      >
+        Access top-tier remote OB/GYN billers, coders, and AR specialists with HBS. Lower costs, accelerate reimbursements, and boost billing accuracy for your OB/GYN practice.
       </p>
-      <div className="decor">
-        <span className="dots">...</span>
-        <span className="line" />
-      </div>
-    </div>
-  </div>
-
-  {/* Content Section */}
-  <div className="container medical-content d-flex align-items-center flex-wrap">
-    {/* Image Left */}
-    <div className="medical-image-wrap order-lg-1 order-1">
-      <img
-        src={billingImg3}
-        alt="OB/GYN Medical Billing"
-        className="medical-image"
-      />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-
-    {/* Text Right */}
-    <div className="medical-text order-lg-2 order-2">
-      <h4>Customized OB/GYN Billing for Better Patient Outcomes</h4>
-      <p>
-        Lacking an independent billing team can lead to poor coverage, a compromised billing process, 
-        claim denials, and significant revenue shortfalls. Additionally, cutting corners by not 
-        outsourcing billing specialists can disrupt your workflow, increase stress on providers, 
-        and result in patient dissatisfaction.
-      </p>
-
-      <p>
-        With HBS’s top-tier specialty billing teams, you can effectively address these challenges. 
-        Our analytics-driven software streamlines your revenue operations, giving you more time 
-        to focus on patient care.
-      </p>
-
-      <p>
-        By outsourcing your OB/GYN billing to HBS, you can efficiently manage the unique needs 
-        of your healthcare services, ensuring better patient outcomes and smoother operations.
-      </p>
+      <button
+        className="btn"
+        style={{
+          background: "#5CBDAA",  // modern teal
+          color: "#fff",
+          fontWeight: "bold",
+          fontSize: "18px",
+          padding: "14px 35px",   // taller and wider
+          borderRadius: "12px",   // rounded corners
+          border: "none",
+          transition: "all 0.3s ease",
+        }}
+        onMouseOver={(e) => (e.target.style.background = "#5CBDAA")}
+        onMouseOut={(e) => (e.target.style.background = "#5CBDAA")}
+      >
+        REQUEST DEMO
+      </button>
     </div>
   </div>
-</section>
+</div>
 
 
+        {/* FLOATING FORM */}
+        <div
+          className="floating-form"
+          style={{
+            background: "#54A1D9",
+            borderRadius: "25px", // ⬅️ fully rounded
+            padding: "35px 30px", // ⬅️ more padding for spacious feel
+            boxShadow: "0px 10px 30px rgba(0,0,0,0.25)", // ⬅️ smoother shadow
+            width: "400px", // ⬅️ slightly wider
+            height: "600px", // ⬅️ taller form
+            position: "absolute",
+            right: "5%",
+            top: "380px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+          }}
+        >
+          <p
+            className="form-title"
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              color: "#ffffff",
+              marginBottom: "10px",
+            }}
+          >
+            Watch an OB/GYN Billing Demo
+          </p>
 
-  <StatsSection />
-<section className="medical-desc">
-  {/* Header Section */}
-  <div className="medical-header">
-    <div className="container">
-      <h2>Streamline Your Revenue Cycle with OB Billing Services</h2>
-      <p>
-        Our specialized OB/GYN billing team offers a cost-effective approach to enhance 
-        your revenue cycle management, ensuring streamlined operations and maximizing 
-        your financial outcomes.
+          <p style={{ fontSize: "14px", color: "#ffffff", marginBottom: "20px" }}>
+            Discover how HBS remote staffing boosts billing revenue for OB/GYN practices.
+          </p>
+
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="First Name*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="Last Name*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="Phone Number*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-4 py-3"
+            placeholder="Email*"
+            style={{ borderRadius: "12px" }}
+          />
+
+          <button
+            className="submit-btn mt-auto"
+            style={{
+              background: "#5CBDAA",
+              border: "none",
+              width: "100%",
+              padding: "15px",
+              borderRadius: "15px",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "16px",
+              transition: "all 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.background = "#5CBDAA")}
+            onMouseOut={(e) => (e.target.style.background = "#5CBDAA")}
+          >
+            BOOK YOUR DEMO
+          </button>
+        </div>
+      </section>
+
+      {/* CONTENT SECTION */}
+      <section
+        className="content-section"
+        style={{
+          paddingTop: "70px",
+          paddingBottom: "100px",
+        }}
+      >
+       <div className="container">
+  <div className="row">
+    <div className="col-md-7">
+      <h2 className="fw-bold" style={{ fontSize: "42px", marginBottom: "25px" }}>
+        Remote OB/GYN Billing Solutions by HBS
+      </h2>
+      <p
+        style={{
+          fontSize: "22px",
+          fontWeight: 500,
+          lineHeight: "1.8",
+          marginTop: "15px",
+        }}
+      >
+        HBS delivers complete remote revenue cycle management for OB/GYN practices. Our expert team handles every aspect of billing: claim creation, submission, follow-up, denial management, appeals, payment posting, and reporting—so you can focus on patient care while we optimize your financial outcomes.
       </p>
-      <div className="decor">
-        <span className="dots">...</span>
-        <span className="line" />
-      </div>
     </div>
   </div>
+</div>
 
-  {/* Content Section */}
-  <div className="container medical-content">
-    {/* Text Section */}
-    <div className="medical-text">
-      <h4>Why Choose HBS OB/GYN Billing Services</h4>
+      </section>
 
-      <p>
-        OB/GYN billing services are designed to minimize claim rejections and strengthen 
-        your revenue cycle management (RCM) system. Trained on data until October 2023, 
-        our expert team ensures that your claim submissions are handled with precise accuracy 
-        and minimal manual errors. Through prompt follow-up and a rigorous accounts receivable 
-        process, we help increase your collection ratio and maintain consistent cash flow.
-      </p>
 
-      <p>
-        As a HIPAA-compliant company, HBS simplifies account reconciliation, claims filing, 
-        and denial management for OB/GYN providers. Our dedicated team works diligently 
-        to counteract claim rejections and minimize common billing discrepancies.
-      </p>
+       <section className="py-5" style={{ background: "#f4f6fb" }}>
+      <div className="container">
 
-      <p>
-        Contact one of our OB/GYN billing specialists today to discover how HBS can improve 
-        your revenue cycle and deliver the financial results your practice deserves.
-      </p>
-    </div>
+        {/* -------------------- ROW 1 -------------------- */}
+        <div className="row align-items-start mb-4">
+          {/* LEFT CONTENT */}
+          <div className="col-md-7">
+            <h2 className="fw-bold mb-3">Remote OB/GYN Billing Expertise</h2>
 
-    {/* Image Section */}
-    <div className="medical-image-wrap">
-      <img 
-        src={billingImg2} 
-        alt="OB/GYN Medical Billing" 
-        className="medical-image" 
-      />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
+            <p>
+              HBS understands the critical importance of accurate preauthorization and billing for OB/GYN procedures. Our remote team follows best practices to prevent authorization denials and maximize revenue:
+            </p>
+
+            <ul style={{ lineHeight: "1.8" }}>
+              <li>
+                <strong>Expert Remote Team:</strong> Our staff is highly trained in CMS codes and modifiers for precise OB/GYN coding.
+              </li>
+              <li>
+                <strong>Advanced ICD-10 Coding:</strong> We utilize combination codes and specialized training for OB/GYN billing.
+              </li>
+              <li>
+                <strong>Compliance Assurance:</strong> Our remote coders and clinicians stay current with evolving OB/GYN billing guidelines.
+              </li>
+              <li>
+                <strong>Procedure-Based Coding:</strong> We ensure billing accuracy by coding exact OB/GYN procedures, not just symptoms.
+              </li>
+            </ul>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="col-md-5 text-center">
+            <img
+              src={cardioImg}
+              alt="Cardiology Billing"
+              className="img-fluid rounded"
+              style={{ maxWidth: "380px", height: "auto" }}
+            />
+          </div>
+        </div>
+
+        {/* -------------------- ROW 2 -------------------- */}
+        <div className="row align-items-start mt-5">
+
+          {/* LEFT ICON GRID 2×2 EXACTLY LIKE CUREMD */}
+          <div className="col-md-7">
+            <div className="row text-center">
+
+              <div className="col-6 mb-4">
+                <FaShieldAlt size={35} color="#005f85" />
+                <h6 className="mt-2">98% Clean Claim Rate</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaCheckCircle size={35} color="#005f85" />
+                <h6 className="mt-2">100% Compliance</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaChartLine size={35} color="#005f85" />
+                <h6 className="mt-2">30% Revenue Increase</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaClock size={35} color="#005f85" />
+                <h6 className="mt-2">3× Faster Payments</h6>
+              </div>
+
+            </div>
+          </div>
+
+          {/* RIGHT TEXT UNDER THE IMAGE */}
+          <div className="col-md-5">
+            <h3 className="fw-bold">
+              AI-Enhanced Remote Billing <br /> for OB/GYN Practices
+            </h3>
+            <p className="mt-3">
+              HBS leverages AI-powered billing platforms to simplify and automate OB/GYN billing, reducing manual errors and streamlining claims processing. Our technology-driven approach lowers denial rates and speeds up reimbursements for your OB/GYN practice.
+            </p>
+            <p>
+              With HBS remote staffing, your team can focus on patient care while we ensure your billing is optimized for a stable, reliable revenue stream.
+            </p>
+            <a href="#" className="text-primary" style={{ fontWeight: "500" }}>
+              Learn More
+            </a>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
+     <section style={{ marginTop: "120px" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* LEFT IMAGE */}
+          <Col md={6} className="mb-4 mb-md-0">
+            <img
+              src={CardiologyImg}
+              alt="Cardiology Billing"
+              className="img-fluid"
+              style={{
+                borderRadius: "25px",
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
+            />
+          </Col>
+
+          {/* RIGHT CONTENT */}
+          <Col md={6}>
+            <h2 className="fw-bold" style={{ fontSize: "36px" }}>
+              OB/GYN Medical Billing with HBS
+            </h2>
+
+            <p style={{ fontSize: "18px", lineHeight: "1.7" }}>
+              Discover how HBS remote staffing can boost your OB/GYN practice’s profitability and minimize billing errors. Explore our full suite of remote OB/GYN billing services tailored for your needs.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </section>
 
 
+    <section style={{ background: "#f5f7fb", padding: "70px 0", marginTop: "80px" }}>
+      <Container>
 
+        {/* HEADING */}
+        <div className="text-center mb-5">
+          <h2 className="fw-bold" style={{ fontSize: "32px" }}>
+            Smart, Fast, Reliable Remote Billing Features <br /> for OB/GYN Practices
+          </h2>
 
-    <Emr />
-    <TestimonialsSection />
-    <Contact />
+          <p className="mt-3" style={{ fontSize: "18px", maxWidth: "750px", margin: "0 auto" }}>
+            HBS combines advanced tools and expert remote support to simplify complex OB/GYN billing, ensuring your claims are accurate and timely every time.
+          </p>
+        </div>
+
+        {/* FEATURES GRID */}
+        <Row>
+          {features.map((item, index) => (
+            <Col md={6} className="mb-4" key={index}>
+              <Card
+                className="h-100 shadow-sm"
+                style={{
+                  borderRadius: "20px",
+                  padding: "25px",
+                  background: "#fff",
+                  border: "none",
+                }}
+              >
+                <Card.Body>
+                  <h5 className="fw-bold mb-3">{item.title}</h5>
+                  <p style={{ lineHeight: "1.7", fontSize: "16px" }}>{item.text}</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+
+      </Container>
+    </section>
+
+     <section
+      style={{
+        background: "#5DBFA7", // blue background similar to screenshot
+        padding: "70px 0",
+        marginTop: "60px",
+      }}
+    >
+      <Container>
+        <Row className="align-items-center">
+
+          {/* LEFT CONTENT */}
+          <Col md={6} className="text-white">
+            <h2 className="fw-bold mb-4">Get Started with HBS</h2>
+
+            <p style={{ lineHeight: "1.7", fontSize: "17px" }}>
+              Experience seamless billing operations with HBS’s advanced AI solutions and remote staffing, designed specifically for OB/GYN practices. Our innovative approach streamlines billing, ensures precision in claims, and maximizes revenue—empowering you to focus on exceptional patient care. Book a demo now to see how our remote OB/GYN billing services can elevate your practice.
+            </p>
+
+            <Button
+              style={{
+                background: "#54A1D9",
+                border: "none",
+                padding: "10px 25px",
+                borderRadius: "6px",
+                marginTop: "20px",
+                fontSize: "16px",
+                fontWeight: "500",
+              }}
+            >
+              Schedule a Demo
+            </Button>
+          </Col>
+
+          {/* RIGHT IMAGE */}
+          <Col md={6} className="text-center mt-4 mt-md-0">
+            <img
+              src={GetStartedImg}
+              alt="Get Started"
+              className="img-fluid"
+              style={{ maxWidth: "350px" }}
+            />
+          </Col>
+
+        </Row>
+      </Container>
+    </section>
+
+    <TestimonialSection />
     </>
   );
-}
+};
 
-export default Obgynbillingservices;
+export default ObgynBilling;

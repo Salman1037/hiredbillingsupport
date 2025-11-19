@@ -1,133 +1,426 @@
-import HeroSection from "../../components/specialities/psychiatrybillinghero";
-import billingImg from '../../assets/images/hero/macbook-Mac.png';
-import billingImg2 from '../../assets/images/hero/Psychiatry-4.jpg';
-import billingImg3 from '../../assets/images/hero/Psychiatry-3.jpg';
 
-import StatsSection from "../../components/Hire/Rcm/StatsSection";
-import Emr from '../../components/Hire/Emr';
-import Contact from "../../components/Contact";
-import TestimonialsSection from "../../components/TestimonialsSection";
+import cardiologyBg  from "../../assets/images/hero/banner/Psychiatry-banner.jpg";
+import { Container, Row, Col,Card,Button  } from "react-bootstrap";
+import CardiologyImg from "../../assets/images/hero/banner1.jpg";
+import GetStartedImg from "../../assets/images/hero/get-started.png";  
+
+import { FaCheckCircle, FaChartLine, FaShieldAlt, FaClock } from "react-icons/fa";
+import cardioImg   from "../../assets/images/hero/banner1.jpg"; // <-- your imported image
+import TestimonialSection from "../../components/specialities/testimonials";
+const features = [
+  {
+    title: "Expert Psychiatry Coding & Mapping",
+    text: "HBS provides comprehensive mapping of psychiatry-specific procedures and diagnoses, ensuring coding accuracy and compliance for every claim.",
+  },
+  {
+    title: "AI-Driven Code Scrubbing & Validation",
+    text: "Our remote team uses advanced AI tools to catch errors and validate codes before submission, reducing rejections and ensuring clean, accurate claims for your psychiatry practice.",
+  },
+  {
+    title: "Specialized Psychiatry Billing Support",
+    text: "HBS offers dedicated remote billing experts who understand the unique needs of psychiatry practices, providing tailored guidance and fast resolution to billing issues.",
+  },
+  {
+    title: "Seamless EHR Integration",
+    text: "We integrate with your psychiatry EHRs for direct patient data transfer, reducing manual entry and minimizing errors for a more efficient billing workflow.",
+  },
+  {
+    title: "Custom Fee Schedule Management",
+    text: "HBS manages customized fee schedules for all psychiatry procedures, ensuring optimal billing rates and helping your practice stay competitive and profitable.",
+  },
+  {
+    title: "Scalable Remote Staffing Solutions",
+    text: "Whether you’re a small, mid-sized, or multi-location psychiatry group, HBS’s remote staffing and billing services are fully scalable and customizable to meet your needs, ensuring long-term success.",
+  },
+];
 
 
-function PsychiatryBillingServices() {
+
+
+const PsychiatryBilling = () => {
   return (
     <>
-    <HeroSection />
-<section className="medical-desc">
-  <div className="medical-header">
-    <div className="container">
-      <h2>Maximize Practice Revenue with Specialized Psychiatry Medical Billing</h2>
-      <p>
-        Maximize your practice's revenue with specialized psychiatry medical billing.
-        Our expert team ensures accurate claim submissions, reduces denials, and
-        streamlines your revenue cycle for optimal financial performance.
+      <section
+        className="hero"
+        style={{
+          backgroundImage: `url(${cardiologyBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          padding: "70px 0",
+          color: "#fff",
+          position: "relative",
+          fontFamily: "Arial, sans-serif",
+          minHeight: "500px",
+        }}
+      >
+       <div className="container">
+  <div className="row align-items-start">
+    <div className="col-md-6">
+      <h1
+        className="fw-bold"
+        style={{
+          fontSize: "48px",
+          lineHeight: "1.2",
+          marginBottom: "20px",
+          color: "#ffffff",
+        }}
+      >
+        Psychiatry Billing & Remote Staffing by HBS
+      </h1>
+      <p
+        style={{
+          fontSize: "20px",
+          lineHeight: "1.8",
+          marginBottom: "30px",
+          color: "#f0f0f0",
+        }}
+      >
+        Access top-tier remote psychiatry billers, coders, and AR specialists with HBS. Lower costs, accelerate reimbursements, and boost billing accuracy for your psychiatry practice.
       </p>
-      <div className="decor">
-        <span className="dots">...</span>
-        <span className="line" />
-      </div>
+      <button
+        className="btn"
+        style={{
+          background: "#5CBDAA",  // modern teal
+          color: "#fff",
+          fontWeight: "bold",
+          fontSize: "18px",
+          padding: "14px 35px",   // taller and wider
+          borderRadius: "12px",   // rounded corners
+          border: "none",
+          transition: "all 0.3s ease",
+        }}
+        onMouseOver={(e) => (e.target.style.background = "#5CBDAA")}
+        onMouseOut={(e) => (e.target.style.background = "#5CBDAA")}
+      >
+        REQUEST DEMO
+      </button>
     </div>
   </div>
+</div>
 
-  <div className="container medical-content">
-    <div className="medical-text">
-      <h4>Prioritize Patient Care with Streamlined Mental Health Billing</h4>
-      <p>
-        Apart from the complex health needs of psychiatric patients, psychiatric practice management involves a host of other attempts to deal with. Keep the advice itself for writing treatment that is right and the patient’s body feels accordingly so when your service fosters along this way the patients will involve in itself as they trust on you. All of these psychiatric billing services primarily aim to relieve financial pressure in billing so you can actually spend more time on patient treatment.
+
+        {/* FLOATING FORM */}
+        <div
+          className="floating-form"
+          style={{
+            background: "#54A1D9",
+            borderRadius: "25px", // ⬅️ fully rounded
+            padding: "35px 30px", // ⬅️ more padding for spacious feel
+            boxShadow: "0px 10px 30px rgba(0,0,0,0.25)", // ⬅️ smoother shadow
+            width: "400px", // ⬅️ slightly wider
+            height: "600px", // ⬅️ taller form
+            position: "absolute",
+            right: "5%",
+            top: "380px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+          }}
+        >
+          <p
+            className="form-title"
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              color: "#ffffff",
+              marginBottom: "10px",
+            }}
+          >
+            Watch a Psychiatry Billing Demo
+          </p>
+
+          <p style={{ fontSize: "14px", color: "#ffffff", marginBottom: "20px" }}>
+            Discover how HBS remote staffing boosts billing revenue for psychiatry practices.
+          </p>
+
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="First Name*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="Last Name*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-3 py-3"
+            placeholder="Phone Number*"
+            style={{ borderRadius: "12px" }}
+          />
+          <input
+            className="form-control mb-4 py-3"
+            placeholder="Email*"
+            style={{ borderRadius: "12px" }}
+          />
+
+          <button
+            className="submit-btn mt-auto"
+            style={{
+              background: "#5CBDAA",
+              border: "none",
+              width: "100%",
+              padding: "15px",
+              borderRadius: "15px",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "16px",
+              transition: "all 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.background = "#5CBDAA")}
+            onMouseOut={(e) => (e.target.style.background = "#5CBDAA")}
+          >
+            BOOK YOUR DEMO
+          </button>
+        </div>
+      </section>
+
+      {/* CONTENT SECTION */}
+      <section
+        className="content-section"
+        style={{
+          paddingTop: "70px",
+          paddingBottom: "100px",
+        }}
+      >
+       <div className="container">
+  <div className="row">
+    <div className="col-md-7">
+      <h2 className="fw-bold" style={{ fontSize: "42px", marginBottom: "25px" }}>
+        Remote Psychiatry Billing Solutions by HBS
+      </h2>
+      <p
+        style={{
+          fontSize: "22px",
+          fontWeight: 500,
+          lineHeight: "1.8",
+          marginTop: "15px",
+        }}
+      >
+        HBS delivers complete remote revenue cycle management for psychiatry practices. Our expert team handles every aspect of billing: claim creation, submission, follow-up, denial management, appeals, payment posting, and reporting—so you can focus on patient care while we optimize your financial outcomes.
       </p>
-
-      <p>
-        We ensure your practice drives results by providing accurate claims submissions and minimizing the risk of revenue loss. Some coders, depending on their level of expertise, can hurry the billings and lessen the value of your therapy sessions by applying inappropriate diagnostic codes, which if they applied the correct codes then you would receive your due on those therapy sessions and we speed up payments from the insurance houses. It’s all part of what lets you focus on what counts, providing excellent care to your clients, while we take care of the nitty-gritty of their mental health billing.
-      </p>
-    </div>
-
-    <div className="medical-image-wrap">
-      <img src={billingImg} alt="Psychiatry Billing" className="medical-image" />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
     </div>
   </div>
-</section>
+</div>
+
+      </section>
 
 
-  <StatsSection />
-<section className="medical-desc">
-  <div className="medical-header">
-    <div className="container">
-      <h2>High-Performing Revenue Cycle with Mental Health Billing</h2>
-      <p>
-        Elevate your psychiatry services with specialized billing for mental health providers, driving financial growth and stability. Our expert billing services ensure a high-performing revenue cycle, allowing you to focus on delivering exceptional care while we enhance the financial health of your practice.
-      </p>
-      <div className="decor">
-        <span className="dots">...</span>
-        <span className="line" />
+       <section className="py-5" style={{ background: "#f4f6fb" }}>
+      <div className="container">
+
+        {/* -------------------- ROW 1 -------------------- */}
+        <div className="row align-items-start mb-4">
+          {/* LEFT CONTENT */}
+          <div className="col-md-7">
+            <h2 className="fw-bold mb-3">Remote Psychiatry Billing Expertise</h2>
+
+            <p>
+              HBS understands the critical importance of accurate preauthorization and billing for psychiatry procedures. Our remote team follows best practices to prevent authorization denials and maximize revenue:
+            </p>
+
+            <ul style={{ lineHeight: "1.8" }}>
+              <li>
+                <strong>Expert Remote Team:</strong> Our staff is highly trained in CMS codes and modifiers for precise psychiatry coding.
+              </li>
+              <li>
+                <strong>Advanced ICD-10 Coding:</strong> We utilize combination codes and specialized training for psychiatry billing.
+              </li>
+              <li>
+                <strong>Compliance Assurance:</strong> Our remote coders and clinicians stay current with evolving psychiatry billing guidelines.
+              </li>
+              <li>
+                <strong>Procedure-Based Coding:</strong> We ensure billing accuracy by coding exact psychiatry procedures, not just symptoms.
+              </li>
+            </ul>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="col-md-5 text-center">
+            <img
+              src={cardioImg}
+              alt="Cardiology Billing"
+              className="img-fluid rounded"
+              style={{ maxWidth: "380px", height: "auto" }}
+            />
+          </div>
+        </div>
+
+        {/* -------------------- ROW 2 -------------------- */}
+        <div className="row align-items-start mt-5">
+
+          {/* LEFT ICON GRID 2×2 EXACTLY LIKE CUREMD */}
+          <div className="col-md-7">
+            <div className="row text-center">
+
+              <div className="col-6 mb-4">
+                <FaShieldAlt size={35} color="#005f85" />
+                <h6 className="mt-2">98% Clean Claim Rate</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaCheckCircle size={35} color="#005f85" />
+                <h6 className="mt-2">100% Compliance</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaChartLine size={35} color="#005f85" />
+                <h6 className="mt-2">30% Revenue Increase</h6>
+              </div>
+
+              <div className="col-6 mb-4">
+                <FaClock size={35} color="#005f85" />
+                <h6 className="mt-2">3× Faster Payments</h6>
+              </div>
+
+            </div>
+          </div>
+
+          {/* RIGHT TEXT UNDER THE IMAGE */}
+          <div className="col-md-5">
+            <h3 className="fw-bold">
+              AI-Enhanced Remote Billing <br /> for Psychiatry Practices
+            </h3>
+            <p className="mt-3">
+              HBS leverages AI-powered billing platforms to simplify and automate psychiatry billing, reducing manual errors and streamlining claims processing. Our technology-driven approach lowers denial rates and speeds up reimbursements for your psychiatry practice.
+            </p>
+            <p>
+              With HBS remote staffing, your team can focus on patient care while we ensure your billing is optimized for a stable, reliable revenue stream.
+            </p>
+            <a href="#" className="text-primary" style={{ fontWeight: "500" }}>
+              Learn More
+            </a>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </div>
-
-  <div className="container medical-content d-flex align-items-center flex-wrap">
-    {/* Image Left */}
-    <div className="medical-image-wrap order-lg-1 order-1">
-      <img src={billingImg3} alt="Psychiatry Billing" className="medical-image" />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-
-    {/* Text Right */}
-    <div className="medical-text order-lg-2 order-2">
-      <h4>Guaranteed Financial Success with Psychiatry Medical Billing</h4>
-      <p>
-        HBS’s mental health billing service focuses on maximizing revenue generation for its psychiatry providers and minimizing claim denials. With experienced professionals, we help you submit your claims with the right CPT codes resulting in timely payment. We improve turnaround time, provide pre-authorization services, and decrease the AR days for psychiatry providers, which does mean a financially stable new practice and a better operation overall!
-      </p>
-
-      <p>
-        Our psychiatry billing services also ensure a higher claim acceptance ratio and faster reimbursements. We also handle benefit verification, maximizing the insurance reimbursement for mental health services as well, ensuring prompt payment for the services you provide.
-      </p>
-    </div>
-  </div>
-</section>
+    </section>
 
 
+     <section style={{ marginTop: "120px" }}>
+      <Container>
+        <Row className="align-items-center">
+          {/* LEFT IMAGE */}
+          <Col md={6} className="mb-4 mb-md-0">
+            <img
+              src={CardiologyImg}
+              alt="Cardiology Billing"
+              className="img-fluid"
+              style={{
+                borderRadius: "25px",
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
+            />
+          </Col>
 
-<section className="medical-desc">
-  <div className="container medical-content">
-    <div className="medical-text">
-      <h4>A Partner That Values Your Financial Health</h4>
-      <p>
-        We know the stress of financials that is why we have designed our pricing model to value your revenue collections. This approach allows us to win-win with you instead of you losing against others. We take a cut of the reimbursements we collect after we actually get paid by your payers.
-      </p>
+          {/* RIGHT CONTENT */}
+          <Col md={6}>
+            <h2 className="fw-bold" style={{ fontSize: "36px" }}>
+              Psychiatry Medical Billing with HBS
+            </h2>
 
-    
-
-      
-    </div>
-
-    <div className="medical-image-wrap">
-      <img src={billingImg2} alt="Financial Health Partner" className="medical-image" />
-      <div className="image-grid" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-  </div>
-</section>
+            <p style={{ fontSize: "18px", lineHeight: "1.7" }}>
+              Discover how HBS remote staffing can boost your psychiatry practice’s profitability and minimize billing errors. Explore our full suite of remote psychiatry billing services tailored for your needs.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </section>
 
 
-    <Emr />
-    <TestimonialsSection />
-    <Contact />
+    <section style={{ background: "#f5f7fb", padding: "70px 0", marginTop: "80px" }}>
+      <Container>
+
+        {/* HEADING */}
+        <div className="text-center mb-5">
+          <h2 className="fw-bold" style={{ fontSize: "32px" }}>
+            Smart, Fast, Reliable Remote Billing Features <br /> for Psychiatry Practices
+          </h2>
+
+          <p className="mt-3" style={{ fontSize: "18px", maxWidth: "750px", margin: "0 auto" }}>
+            HBS combines advanced tools and expert remote support to simplify complex psychiatry billing, ensuring your claims are accurate and timely every time.
+          </p>
+        </div>
+
+        {/* FEATURES GRID */}
+        <Row>
+          {features.map((item, index) => (
+            <Col md={6} className="mb-4" key={index}>
+              <Card
+                className="h-100 shadow-sm"
+                style={{
+                  borderRadius: "20px",
+                  padding: "25px",
+                  background: "#fff",
+                  border: "none",
+                }}
+              >
+                <Card.Body>
+                  <h5 className="fw-bold mb-3">{item.title}</h5>
+                  <p style={{ lineHeight: "1.7", fontSize: "16px" }}>{item.text}</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+
+      </Container>
+    </section>
+
+     <section
+      style={{
+        background: "#5DBFA7", // blue background similar to screenshot
+        padding: "70px 0",
+        marginTop: "60px",
+      }}
+    >
+      <Container>
+        <Row className="align-items-center">
+
+          {/* LEFT CONTENT */}
+          <Col md={6} className="text-white">
+            <h2 className="fw-bold mb-4">Get Started with HBS</h2>
+
+            <p style={{ lineHeight: "1.7", fontSize: "17px" }}>
+              Experience seamless billing operations with HBS’s advanced AI solutions and remote staffing, designed specifically for psychiatry practices. Our innovative approach streamlines billing, ensures precision in claims, and maximizes revenue—empowering you to focus on exceptional patient care. Book a demo now to see how our remote psychiatry billing services can elevate your practice.
+            </p>
+
+            <Button
+              style={{
+                background: "#54A1D9",
+                border: "none",
+                padding: "10px 25px",
+                borderRadius: "6px",
+                marginTop: "20px",
+                fontSize: "16px",
+                fontWeight: "500",
+              }}
+            >
+              Schedule a Demo
+            </Button>
+          </Col>
+
+          {/* RIGHT IMAGE */}
+          <Col md={6} className="text-center mt-4 mt-md-0">
+            <img
+              src={GetStartedImg}
+              alt="Get Started"
+              className="img-fluid"
+              style={{ maxWidth: "350px" }}
+            />
+          </Col>
+
+        </Row>
+      </Container>
+    </section>
+
+    <TestimonialSection />
     </>
   );
-}
+};
 
-export default PsychiatryBillingServices;
+export default PsychiatryBilling;

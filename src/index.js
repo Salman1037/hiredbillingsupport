@@ -10,6 +10,9 @@ import './assets/css/magnific-popup.min.css';
 import './assets/css/odometer.min.css';
 import './assets/css/style.css';
 import './assets/css/swiper-bundle.min.css';
+// Import some JS utilities used by the template (bootstrap etc.) so data-bs attributes work
+// Use the official bootstrap bundle from node_modules (includes Popper) so ESLint doesn't lint minified vendor file
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

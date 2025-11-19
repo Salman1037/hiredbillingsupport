@@ -62,11 +62,11 @@
 .service-layout {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  min-height: 600px;
+  min-height: auto;
 }
 
 .service-main-content {
-  padding: 40px;
+  padding: 20px;
 }
 
 .service-info {
@@ -92,8 +92,8 @@
 .service-card {
   background: #F8F9FA;
   border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 12px;
+  padding: 16px;
+  margin-bottom: 0px;
 }
 
 .service-card-content {
@@ -120,17 +120,51 @@
   margin: 0;
 }
 
+/* Arrow button inside each card (right side) */
+.service-card-arrow {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0F3A77; /* deep navy like provided image */
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(15, 58, 119, 0.25);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.service-card-arrow .arrow-inner {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.service-card:hover .service-card-arrow {
+  transform: translateX(4px);
+  background: #00B4D8; /* subtle hover tint matching theme */
+}
+
+/* make sure card is positioned relatively so absolute arrow sits inside */
+.service-card {
+  position: relative;
+}
+
 .service-image-section {
   position: relative;
   background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 20px;
 }
 
 .service-image-container {
-  padding: 20px;
-  height: 100%;
+  padding: 15px;
+  height: auto;
 }
 
 .service-feature-image {
@@ -142,15 +176,29 @@
 
 .service-image-section h4 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
-  padding: 0 20px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-image-section h4::after {
+  content: '→';
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.service-image-section:hover h4::after {
+  transform: translateX(5px);
 }
 
 .service-image-section p {
   font-size: 1rem;
   line-height: 1.6;
-  padding: 0 20px;
-  margin-bottom: 20px;
+  padding: 0 15px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 992px) {

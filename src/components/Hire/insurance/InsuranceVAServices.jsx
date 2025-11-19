@@ -19,7 +19,7 @@ const InsuranceVAServices = () => {
           ></div>
           <p className="mb-0 fs-6">
             Leverage dedicated Insurance VAs to reduce denials, speed approvals, and keep
-            reimbursements moving. <strong>Starts at $7/Hr.</strong>
+            reimbursements moving. <strong>Starts at $10/Hr.</strong>
           </p>
         </Container>
       </section>

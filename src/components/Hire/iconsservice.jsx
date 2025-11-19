@@ -12,7 +12,7 @@ const IconsService = () => {
     },
     {
       icon: <BsLaptop size={40} />,
-      title: 'EHR/EDR Ready',
+      title: 'EHR Ready',
       description: ''
     },
     {

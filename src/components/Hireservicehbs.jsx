@@ -10,8 +10,8 @@ import hospitalRcmImg from '../assets/images/services/hospital-rcm.jpg';
 const tabData = [
   {
     key: 'medical',
-    label: 'Medical VA',
-    description: 'Keep phones answered, schedules full, and claims moving. Our trained Medical VAs work inside your EHR to handle front-desk, insurance, and documentation—so your clinicians stay with patients.',
+    label: 'Medical',
+    description: 'Keep phones answered, schedules full, and claims moving. Our trained remote staff work inside your EHR to handle front-desk, insurance, and documentation—so your clinicians stay with patients.',
     cards: [
       { title: 'Medical Receptionist', desc: 'Answers calls, books/reschedules, manages reminders and intake.' },
       { title: 'Insurance Eligibility Specialist', desc: 'Verifies coverage, copays/deductibles, COB, posts notes to EHR.' },
@@ -23,11 +23,11 @@ const tabData = [
   },
   {
     key: 'dental',
-    label: 'Dental VA',
-    description: 'From front-desk to insurance, Dental VAs keep chairs filled and revenue clean—working in Dentrix, Open Dental, Eaglesoft, and more.',
+    label: 'Dental ',
+    description: 'From front-desk to insurance, remote dental specialists keep chairs filled and revenue clean—working in Dentrix, Open Dental, Eaglesoft, and more.',
     cards: [
       { title: 'Dental Receptionist', desc: 'Phones, online requests, new-patient intake, confirmations.' },
-      { title: 'Eligibility & Benefits', desc: 'Verifies frequencies, downgrades, eating periods, adds notes to EDR.' },
+      { title: 'Eligibility & Benefits', desc: 'Verifies frequencies, downgrades, eating periods, adds notes to EHR.' },
       { title: 'Pre-Auth & Predeterminations', desc: 'Submits with images/notes and tracks decisions.' },
       { title: 'Claims & A/R Specialist', desc: 'Cleans rejections, follows up, and reconciles EOBs.' },
       { title: 'Dental Scribe/Charting', desc: 'Perio charting, notes, and imaging labels per provider.' }
@@ -36,7 +36,7 @@ const tabData = [
   },
   {
     key: 'hospital',
-    label: 'Hospital RCM Services',
+    label: 'Rcm Management',
     description: 'End-to-end charge to cash for hospitals and groups. We improve first-pass approvals, reduce time to A/R and give you clear KPIs—working inside your existing EHR/PM.',
     cards: [
       { title: 'Eligibility & Registration QA', desc: 'Validates coverage and corrects registration issues.' },

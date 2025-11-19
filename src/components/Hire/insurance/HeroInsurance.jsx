@@ -1,145 +1,202 @@
-// import React from "react";
-// import { FaDesktop } from "react-icons/fa";
-// import heroBg from "../../../assets/images/services/Tailored-Medical-Billing-Services-02.jpg"; // ✅ Imported background image
 
-// const HeroBanner = () => {
+// import { Link } from "react-router-dom";
+// import bannerImage from "../../../assets/images/services/inshurance-hero.jpg"; // ✅ Import your local hero image
+
+// const HeroSection = () => {
 //   return (
 //     <section
-//       id="hero"
-//       className="th-hero-wrapper hero-1 position-relative"
+//       className="hero-section text-dark d-flex align-items-center position-relative"
 //       style={{
-//         backgroundImage: `url(${heroBg})`,
+//         backgroundImage: `url(${bannerImage})`,
 //         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         backgroundRepeat: "no-repeat",
+//         backgroundPosition: "center right",
+//         minHeight: "70vh",
+//         paddingTop: "60px",
+//         paddingBottom: "60px",
 //       }}
 //     >
-//       <div className="container py-5">
-//         <div className="hero-style1 text-center text-white">
-//           {/* Subtitle / Heading */}
-//           <h3 className="fw-bold mb-3" data-ani="slideinup" data-ani-delay="0.2s">
-//             Insurance Virtual Assistants{" "}
-//             <span className="text-theme d-block">That Keep Claims Moving</span>
-//           </h3>
+//       {/* Overlay for better text visibility */}
+//       <div
+//         className="position-absolute top-0 start-0 w-100 h-100"
+//         style={{
+//           background: "rgba(255, 255, 255, 0.75)",
+//           zIndex: 1,
+//         }}
+//       ></div>
 
-//           {/* Paragraph */}
-//           <p
-//             className="hero-text fs-5 mb-4"
-//             data-ani="slideinup"
-//             data-ani-delay="0.6s"
-//           >
-//             Dedicated Insurance VAs for eligibility, pre-authorizations, claim
-//             status, denials and appeals—working inside your EHR/billing tools.
-//             <br />
-//             <span className="fw-bold text-theme">Starts at $7/Hr.</span>
-//           </p>
+//       <div className="container position-relative z-3">
+//         <div className="row">
+//           <div className="col-lg-7">
+//             <div className="pe-lg-4">
+//               <div className="mb-3">
+//                 <small
+//                   style={{
+//                     fontSize: "15px",
+//                     fontWeight: "500",
+//                     color: "#00BFA6",
+//                   }}
+//                 >
+//                   Rates from $10/Hr
+//                 </small>
+//               </div>
 
-//           {/* Button */}
-//           <a
-//             href="/schedule-a-demo/"
-//             className="btn btn-primary px-4 py-2 fw-semibold d-inline-flex align-items-center"
-//             data-ani="slideinup"
-//             data-ani-delay="0.6s"
-//             style={{
-//               backgroundColor: "#007bff",
-//               borderRadius: "8px",
-//               border: "none",
-//             }}
-//           >
-//             <FaDesktop className="me-2" />
-//             Schedule Demo
-//           </a>
+//               <h1
+//                 className="fw-bold mb-4"
+//                 style={{
+//                   fontSize: "42px",
+//                   lineHeight: "1.2",
+//                   background:
+//                     "linear-gradient(90deg, #00BFA6 0%, #0091EA 100%)",
+//                   WebkitBackgroundClip: "text",
+//                   WebkitTextFillColor: "transparent",
+//                 }}
+//               >
+//                 Remote Insurance VAs that Maximize Your Claims Processing
+//               </h1>
+
+//               <p className="lead mb-4 text-dark">
+//                 Dependable, HIPAA-aligned insurance VAs who excel in claims management and billing—reducing overhead and keeping your operations running smoothly, so you can stay focused on customer satisfaction.
+//               </p>
+
+//               <Link
+//                 to="/contact"
+//                 className="btn btn-success btn-lg"
+//                 style={{
+//                   background:
+//                     "linear-gradient(90deg, #00BFA6 0%, #0091EA 100%)",
+//                   border: "none",
+//                   borderRadius: "25px",
+//                   padding: "12px 30px",
+//                   fontWeight: "600",
+//                   color: "white",
+//                   textDecoration: "none",
+//                 }}
+//               >
+//                 Book a Consult →
+//               </Link>
+//             </div>
+//           </div>
 //         </div>
 //       </div>
 //     </section>
 //   );
 // };
 
-// export default HeroBanner;
-import React from "react";
-import { FaDesktop } from "react-icons/fa";
-import heroImage from "../../../assets/images/services/Tailored-Medical-Billing-Services-02.jpg"; // ✅ image import
+// export default HeroSection;
 
-const HeroSection = () => {
+import { Link } from "react-router-dom";
+import bannerImage from "../../../assets/images/hero/banner/inshurance-banner.jpg"; // Replace with insurance banner if needed
+const InsuranceHero = () => {
   return (
     <section
-      className="hero-section d-flex align-items-center"
+      className="hero-section d-flex align-items-center position-relative"
       style={{
-        minHeight: "100vh", // ✅ full screen height
-        background: "linear-gradient(90deg, #f9fcff 0%, #ffffff 100%)",
-        overflow: "hidden",
+        backgroundImage: `url(${bannerImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "75vh",
+        paddingTop: "80px",
+        paddingBottom: "80px",
+        color: "#fff",
       }}
     >
-      <div className="container">
-        <div className="row align-items-center justify-content-between">
-          {/* LEFT SIDE CONTENT */}
-          <div className="col-lg-6 col-md-12">
-            <div className="text-content" style={{ paddingRight: "20px" }}>
+      <div className="container position-relative z-3">
+        <div className="row align-items-center">
+          <div className="col-lg-7 col-md-10 col-12">
+            <div className="pe-lg-4">
+
+              <div className="mb-3">
+                <small
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: 600,
+                    letterSpacing: "0.3px",
+                  }}
+                >
+                  Starting From $10/Hr
+                </small>
+              </div>
+
+              {/* Heading */}
               <h1
                 className="fw-bold mb-4"
                 style={{
-                  color: "#001d4a",
-                  fontSize: "2.8rem",
-                  lineHeight: "1.3",
+                  fontSize: "42px",
+                  lineHeight: "1.2",
+                  color: "#fff",
                 }}
               >
-                Insurance Virtual Assistants
-                <br />
-                <span style={{ color: "#00c36a" }}>That Keep Claims Moving</span>
+                Hire Remote Insurance Staff with HBS
               </h1>
 
+              {/* Short Paragraph */}
               <p
-                className="text-muted mb-4"
+                className="lead mb-4"
                 style={{
-                  fontSize: "1.1rem",
-                  lineHeight: "1.8",
-                  maxWidth: "500px",
+                  fontSize: "18px",
+                  lineHeight: "1.6",
+                  maxWidth: "650px",
                 }}
               >
-                Dedicated Insurance VAs for eligibility, pre-authorizations,
-                claim status, denials and appeals—working inside your
-                EHR/billing tools.
-                <br />
-                <strong>Starts at $7/Hr.</strong>
+                Get trained insurance agents, claims processors, and policy
+                coordinators to support your workflow. Reduce costs, improve
+                speed, and keep operations running smoothly.
               </p>
 
-              <a
-                href="/schedule-a-demo"
-                className="btn d-inline-flex align-items-center fw-semibold"
+              <Link
+                to="/contact"
+                className="btn btn-lg"
                 style={{
-                  background: "linear-gradient(90deg, #00c36a 0%, #0094ff 100%)",
+                  background: "#fff",
+                  borderRadius: "30px",
+                  padding: "12px 35px",
+                  fontWeight: "600",
+                  color: "#00A651",
                   border: "none",
-                  borderRadius: "10px",
-                  padding: "14px 30px",
-                  color: "#fff",
-                  fontSize: "1rem",
-                  boxShadow: "0 5px 20px rgba(0,0,0,0.15)",
                 }}
               >
-                <FaDesktop className="me-2" />
-                SCHEDULE DEMO
-              </a>
-            </div>
-          </div>
+                Book a Consult →
+              </Link>
 
-          {/* RIGHT SIDE IMAGE */}
-          <div className="col-lg-6 col-md-12  mt-5 mt-lg-0">
-            <img
-              src={heroImage}
-              alt="Health Insurance Claim Form"
-              className="img-fluid rounded-4 "
-              style={{
-                maxHeight: "890px",
-                width: "100%",
-                objectFit: "cover",
-                height: "100%",
-              }}
-            />
+            </div>
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+          @media (max-width: 992px) {
+            .hero-section {
+              min-height: 65vh;
+              padding-top: 60px;
+              padding-bottom: 60px;
+              text-align: center;
+            }
+            .hero-section h1 {
+              font-size: 32px !important;
+            }
+            .hero-section p {
+              font-size: 16px !important;
+            }
+          }
+
+          @media (max-width: 576px) {
+            .hero-section {
+              padding-top: 40px;
+              padding-bottom: 40px;
+            }
+            .hero-section h1 {
+              font-size: 26px !important;
+            }
+            .hero-section p {
+              font-size: 15px !important;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
 
-export default HeroSection;
+export default InsuranceHero;

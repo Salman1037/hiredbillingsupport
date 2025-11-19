@@ -1,25 +1,20 @@
-import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import medicalReceptionist from '../../../assets/images/avatar/medical-receptionist.png';
-import medicalCoder from '../../../assets/images/avatar/medical-coder.png';
-import medicalScribe from '../../../assets/images/avatar/medical-scribe.png';
-import eligibilitySpecialist from '../../../assets/images/avatar/eligibility-specialist.png';
-import billingCoordinator from '../../../assets/images/avatar/billing-coordinator.png';
-import billingSpecialist from '../../../assets/images/avatar/billing-specialist.png';
-import priorAuthCoordinator from '../../../assets/images/avatar/prior-auth-coordinator.png';
+import medicalReceptionist from '../../../assets/images/avatar/team-6.png';
+import medicalCoder from '../../../assets/images/avatar/team-5.png';
+import medicalScribe from '../../../assets/images/avatar/team-8.png';
+import billingCoordinator from '../../../assets/images/avatar/team-11.png';
+import billingSpecialist from '../../../assets/images/avatar/team-12.png';
+import priorAuthCoordinator from '../../../assets/images/avatar/team-13.png';
 import patientIntakeCoordinator from '../../../assets/images/avatar/patient-intake-coordinator.png';
 import insuranceVerification from '../../../assets/images/avatar/insurance-verification.png';
-
 const Readygoal = () => {
   const roles = [
     {
         image: insuranceVerification,
-    //  
       title: " Dental Insurance Coordinator ",
       description: " Processes dental claims end-to-end and manages pre-authorizations/predeterminations with required narratives and attachments."
     },
     {
-    //  
     image: patientIntakeCoordinator,
       title: " Dental Receptionist",
       description: " Handles phones, scheduling and cancellations, confirmations/reminders, intake links, and patient messages."
@@ -125,7 +120,7 @@ const Readygoal = () => {
                 fontWeight: '500'
               }}
             >
-              Started from $/Hr
+              Started from $10/Hr
             </button>
           </Col>
         </Row>

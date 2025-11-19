@@ -18,10 +18,33 @@ const WhyHire = () => {
         <section className="why-hire-section pt-100 pb-70">
             <div className="container">
                 <div className="section-title text-center mb-5">
-                    <h2>Why Hired Billing Support</h2>
+                   <h2 style={{ fontWeight: 'bold' }}>
+  <span
+    style={{
+    //   background: 'linear-gradient(90deg, #1abc9c, #3498db)',
+      background: ' #3498db',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+    }}
+  >
+    Why Hired&nbsp;
+  </span>
+
+  <span
+    style={{
+    //   background: 'linear-gradient(90deg, #1abc9c, #3498db)',
+      background: ' #1abc9c',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+    }}
+  >
+    Billing Support
+  </span>
+</h2>
+
                     <p className="mb-0">
-                        Pre-vetted, HIPAA-aligned Medical & Dental VAs who work in your EHR/EDR and keep 
-                        schedules full and claims moving — from $6/hr.
+                        Pre-vetted, HIPAA-aligned medical & dental remote talent who work in your EHR and keep 
+                        schedules full and claims moving — from $10/hr.
                     </p>
                 </div>
 
@@ -30,7 +53,8 @@ const WhyHire = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="feature-card text-center mb-4 wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.1s">
                             <div className="icon-wrapper mb-4">
-                                <i className="fas fa-shield-check"></i>
+                              <i className="fas fa-shield-alt"></i>
+
                             </div>
                             <h3>HIPAA-Secure & Compliant</h3>
                             <p>

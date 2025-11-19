@@ -1,9 +1,11 @@
-import Contact from "../components/Contact";
+
 import CountUpStats from "../components/CountUpStats";
+import Faq from "../components/Faq";
 import Hero from "../components/Hero";
 import HireService from "../components/Hireservicehbs";
 import Medicaldesc from "../components/Medicaldesc";
 import Ourcertification from "../components/Ourcertification";
+import PricingDemoForm from "../components/PricingDemoForm";
 import SavingsCalculator from "../components/SavingsCalculator";
 import Servicessec from "../components/Servicessec";
 import WhyHireWithWorkdeskVA from "../components/WhyHire";
@@ -19,7 +21,9 @@ function Home() {
       <Servicessec/>
       <SavingsCalculator/>
       <Ourcertification/>
-      <Contact/>
+      <PricingDemoForm/>
+      <Faq/>
+      
     </>
   );
 }

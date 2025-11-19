@@ -1,48 +1,55 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import bannerImage from "../assets/images/backgrounds/Pricing.jpg"; // ✅ Updated banner image
+ // ✅ Updated banner image
 
 const PricingHero = () => {
   return (
     <section
-      className="hero-section text-dark d-flex align-items-center position-relative"
+      className="hero-section d-flex align-items-center justify-content-center position-relative"
       style={{
-        backgroundImage: `url(${bannerImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center right",
-        height: "100vh",
-        paddingTop: "140px", // ✅ Add top space to avoid header overlap
-        paddingBottom: "80px", // ✅ Balanced bottom padding
+        backgroundColor: 'var(--bs-primary)',
+        overflow: 'hidden',
+        padding: '0',
       }}
       id="hero"
     >
-      {/* Overlay */}
+      {/* Overlay for contrast */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 0,
           left: 0,
-          width: "100%",
-          height: "100%",
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(0deg, rgba(var(--bs-primary-rgb),0.95), rgba(0,0,0,0.20))',
+          zIndex: 1,
         }}
       ></div>
 
       {/* Content */}
-      <div className="container position-relative" style={{ zIndex: 2 }}>
-        <div className="hero-content py-5">
-          {/* Heading */}
-          <h2
-            className="fw-bold"
+      <div className="container position-relative d-flex flex-column align-items-center justify-content-center" style={{ zIndex: 2, minHeight: '400px' }}>
+        <div className="hero-content text-center py-5">
+          <h1
+            className="fw-bold mb-3"
             style={{
-              fontSize: "2.5rem",
-              color: "#112D55",
-              lineHeight: "1.3",
-              textShadow: "0 1px 2px rgba(0,0,0,0.1)",
+              fontSize: '2.5rem',
+              color: 'var(--bs-white)',
+              lineHeight: '1.2',
+              textShadow: '0 2px 8px rgba(0,0,0,0.18)',
             }}
           >
-            Pricing
-          </h2>
-
-        
+            Remote Staffing Pricing - Save<br />upto 70% in Payroll
+          </h1>
+          <p
+            className="lead mt-3"
+            style={{
+              color: 'rgba(255,255,255,0.92)',
+              fontWeight: 500,
+              fontSize: '1.15rem',
+              textShadow: '0 1px 2px rgba(0,0,0,0.10)',
+            }}
+          >
+            Hiring remote talent can significantly reduce overhead costs by up to 70%<br />compared to hiring an in-house employee.
+          </p>
         </div>
       </div>
 
@@ -60,18 +67,15 @@ const PricingHero = () => {
 
           @media (max-width: 992px) {
             .hero-section {
-              height: auto !important;
-              padding: 80px 0;
+              min-height: 260px !important;
+              border-radius: 1rem;
+              margin: 16px 0;
               text-align: center;
             }
-            .hero-content h2 {
-              font-size: 2rem;
-            }
             .hero-content h1 {
-              font-size: 1.6rem;
+              font-size: 1.5rem;
             }
-            .hero-content p,
-            .hero-content ul {
+            .hero-content p {
               font-size: 1rem;
             }
           }

@@ -1,28 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
-
-
 const Footer = () => {
-  const quickLinks = [
-    { name: "AdvancedMD EHR Software", path: "/advancedmd-ehr-software" },
-    { name: "Athena EHR Software", path: "/athena-ehr-software" },
-    { name: "CARE CLOUD EHR Software", path: "/care-cloud-ehr-software" },
-    { name: "e Clinical Works EMR", path: "/e-clinical-works-emr" },
-    { name: "EPIC EHR Software", path: "/epic-ehr-software" },
-    { name: "NextGen EHR Software", path: "/nextgen-ehr-software" }
+  const siteNavigation = [
+    { name: "Home", path: "/" },
+    { name: "Medical", path: "/medical" },
+    { name: "Dental", path: "/dental" },
+    { name: "RCM Management", path: "/rcm-management" },
+    { name: "Insurance", path: "/insurance" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" }
+  ];
+  const specialtyServices = [
+    { name: "Neurology Billing", path: "/neurology-billing" },
+    { name: "Cardiology Billing", path: "/cardiology-billing" },
+    { name: "Endocrinology Billing", path: "/endocrinology-billing" },
+    { name: "Podiatry Billing", path: "/podiatry-billing" },
+    { name: "Orthopedic Billing", path: "/orthopedic-billing" },
+    { name: "OBGYN Billing", path: "/obgyn-billing" },
+    { name: "Psychiatry Billing", path: "/psychiatry-billing" },
+    { name: "Nephrology Billing", path: "/nephrology-billing" }
   ];
 
-  const popularServices = [
-    { name: "Laboratory Billing Services", path: "/laboratory-billing-services" },
-    { name: "Medical Billing Services", path: "/medical-billing-services" },
-    { name: "Robotic Process Automation", path: "/robotic-process-automation" },
-    { name: "RCM Services", path: "/rcm-services" },
-    { name: "Healthcare Credentialing Services", path: "/healthcare-credentialing-services" },
-    { name: "Patient Eligibility Verification", path: "/patient-eligibility-verification" },
-    { name: "Robotic Process Automation", path: "/robotic-process-automation" },
-    { name: "Medical Billing Audit", path: "/medical-billing-audit" }
+  const quickLinks = [
+    { name: "Case Study", path: "/case-study" },
+    { name: "Article 28 Facilities", path: "/article-28-facilities" }
   ];
+
+  const popularServices = [];
 
   return (
     <footer className="pt-5 pb-4" style={{ backgroundColor: '#f8f9fa' }}>
@@ -67,11 +73,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links Section */}
-          <div className="col-lg-4 mb-4">
-            <h3 className="mb-4" style={{ color: '#002856', fontSize: '24px', fontWeight: '600' }}>Quick Links</h3>
+          {/* Site Navigation Section */}
+          <div className="col-lg-2 mb-4">
+            <h3 className="mb-4" style={{ color: '#002856', fontSize: '24px', fontWeight: '600' }}>Navigation</h3>
             <ul className="list-unstyled">
-              {quickLinks.map((link, index) => (
+              {siteNavigation.map((link, index) => (
                 <li key={index} className="mb-3">
                   <Link 
                     to={link.path} 
@@ -88,10 +94,45 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Popular Services Section */}
-          <div className="col-lg-4 mb-4">
-            <h3 className="mb-4" style={{ color: '#002856', fontSize: '24px', fontWeight: '600' }}>Popular Service</h3>
+          {/* Specialty Services Section */}
+          <div className="col-lg-3 mb-4">
+            <h3 className="mb-4" style={{ color: '#002856', fontSize: '24px', fontWeight: '600' }}>Specialty Services</h3>
             <ul className="list-unstyled">
+              {specialtyServices.map((service, index) => (
+                <li key={index} className="mb-3">
+                  <Link 
+                    to={service.path} 
+                    className="text-decoration-none text-muted d-flex align-items-center"
+                    style={{ transition: 'color 0.3s ease' }}
+                    onMouseEnter={(e) => e.target.style.color = '#00A6E6'}
+                    onMouseLeave={(e) => e.target.style.color = ''}
+                  >
+                    <span className="me-2">›</span>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Other Links Section */}
+          <div className="col-lg-3 mb-4">
+            <h3 className="mb-4" style={{ color: '#002856', fontSize: '24px', fontWeight: '600' }}>Other Links</h3>
+            <ul className="list-unstyled">
+              {quickLinks.map((link, index) => (
+                <li key={index} className="mb-3">
+                  <Link 
+                    to={link.path} 
+                    className="text-decoration-none text-muted d-flex align-items-center"
+                    style={{ transition: 'color 0.3s ease' }}
+                    onMouseEnter={(e) => e.target.style.color = '#00A6E6'}
+                    onMouseLeave={(e) => e.target.style.color = ''}
+                  >
+                    <span className="me-2">›</span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
               {popularServices.map((service, index) => (
                 <li key={index} className="mb-3">
                   <Link 
@@ -109,8 +150,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
-        {/* Copyright Section */}
         <div className="row mt-4 pt-4 border-top">
           <div className="col-md-6 text-center text-md-start">
             <p className="mb-0" style={{ color: '#00A6E6' }}>
@@ -131,5 +170,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

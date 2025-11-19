@@ -83,7 +83,7 @@ const BacklogSection = () => {
             follow-ups. You keep clinical staff on patient care while we keep revenue
             in motion.{" "}
             <strong style={{ color: "#031b4e" }}>
-              From $7/Hr, month-to-month.
+              From $10/Hr, month-to-month.
             </strong>
           </p>
         </div>

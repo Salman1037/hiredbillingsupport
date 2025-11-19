@@ -1,21 +1,21 @@
+
 import React, { useRef, useEffect, useState } from 'react';
 import './CountUpStats.css';
-
 const stats = [
   {
-    value: 1000,
-    suffix: '$+',
-    label: 'Our customers have hired over 1,000 remote talent with Hired Billing Support.'
-  },
-  {
-    value: 40,
-    suffix: 'M+',
-    label: 'Hired Billing Support has saved clients $40M+ in staffing costs - and counting.'
-  },
-  {
-    value: 300,
+    value: 250,
     suffix: '+',
-    label: 'Over 300 businesses trust Hired Billing Support with their remote staffing needs.'
+    label: 'Our customers have hired over 250 remote talent with Hired Billing Support.'
+  },
+  {
+    value: 10,
+    suffix: 'M+',
+    label: 'Hired Billing Support has saved clients $10M+ in staffing costs - and counting.'
+  },
+  {
+    value: 75,
+    suffix: '+',
+    label: 'Over 75 businesses trust Hired Billing Support with their remote staffing needs.'
   }
 ];
 
@@ -34,17 +34,29 @@ const CountUpStats = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    function onScroll() {
-      if (!visible && sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          setVisible(true);
-        }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !visible) {
+            setVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: '0px'
       }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-    window.addEventListener('scroll', onScroll);
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, [visible]);
 
   useEffect(() => {
@@ -102,3 +114,4 @@ const CountUpStats = () => {
 };
 
 export default CountUpStats;
+

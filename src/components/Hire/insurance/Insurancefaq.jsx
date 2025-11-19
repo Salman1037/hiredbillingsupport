@@ -10,7 +10,7 @@ const Insurancefaq = () => {
       title: "Eligibility & Benefits Verification",
       color: "#00c26f",
       content: [
-        "Make visits bill-ready before patients arrive. (From $7/Hr)",
+        "Make visits bill-ready before patients arrive. (From $10/Hr)",
         "Verify coverage, copays, deductibles, visit limits, and COB",
         "Document patient responsibility and notes directly in the chart",
         "Flag frequency/exclusions and missing data for front desk",

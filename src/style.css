@@ -5864,7 +5864,7 @@ Responsive For Mobile & Tablet Devices
 /* Hero Section Styles */
 .hero_section {
   min-height: 40vh;
-  padding: 160px 0 40px;
+  padding: 120px 0 40px;
   position: relative;
   background: linear-gradient(135deg, #1995A2 0%, #117783 50%, #0C5660 100%);
   overflow: hidden;

@@ -2,13 +2,13 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import medicalReceptionist from '../../assets/images/avatar/medical-receptionist.png';
 import medicalCoder from '../../assets/images/avatar/medical-coder.png';
-import medicalScribe from '../../assets/images/avatar/medical-scribe.png';
+import medicalScribe from '../../assets/images/avatar/team-3.png';
 import eligibilitySpecialist from '../../assets/images/avatar/eligibility-specialist.png';
 import billingCoordinator from '../../assets/images/avatar/billing-coordinator.png';
-import billingSpecialist from '../../assets/images/avatar/billing-specialist.png';
+import billingSpecialist from '../../assets/images/avatar/team-2.png';
 import priorAuthCoordinator from '../../assets/images/avatar/prior-auth-coordinator.png';
 import patientIntakeCoordinator from '../../assets/images/avatar/patient-intake-coordinator.png';
-import insuranceVerification from '../../assets/images/avatar/insurance-verification.png';
+import insuranceVerification from '../../assets/images/avatar/team-1.png';
 
 const Readygoal = () => {
   const roles = [
@@ -121,7 +121,7 @@ const Readygoal = () => {
                 fontWeight: '500'
               }}
             >
-              Started from $/Hr
+              Started from $10/Hr
             </button>
           </Col>
         </Row>

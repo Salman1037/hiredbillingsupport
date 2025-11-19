@@ -29,9 +29,9 @@ const Ourcertification = () => {
         <div className="container">
           <div className="row justify-content-center mb-4">
             <div className="col-lg-8 text-center">
-              <h2 className="fw-bold mb-3" style={{ color: '#002856' }}>Our Certifications</h2>
-              <p className="text-muted">
-                We strictly adhere to compliance and state regulations and our certifications exhibit that well.
+              <h2 className="fw-bold mb-3" style={{ color: '#002856' }}>Compliance That Builds Confidence</h2>
+              <p className="text-muted" style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
+                Over 500 businesses trust HBS as their remote staffing solution because we meet the strictest security and compliance standards. We safeguard sensitive data while helping you grow with confidence.
               </p>
             </div>
           </div>
