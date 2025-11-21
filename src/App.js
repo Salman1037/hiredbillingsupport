@@ -24,6 +24,10 @@ import NephrologyBillingServices from './Pages/specialitiespage/nephrology-billi
 import Casestudy from './Pages/casestudy';
 import ArticleFacilitiesPage from './Pages/article-28-facilities';
 import NotFound from './Pages/NotFound';
+import HBSCaseStudy from './Pages/HBSCaseStudy';
+import HBSMarketingPage from './Pages/HBSMarketingPage';
+import PrivacyPolicy from './Pages/privacy-policy';
+import TermsConditions from './Pages/terms-conditions';
 // import Blog from './Pages/Blog';
 
 
@@ -33,16 +37,25 @@ function MetadataManager() {
   const location = useLocation();
   
   const getMetadataForPath = (path) => {
+    // Handle dynamic case study routes with doctor slug
+    if (path.startsWith('/case-study/')) {
+      const slug = path.replace('/case-study/', '');
+      if (metadata.caseStudies && metadata.caseStudies[slug]) {
+        return metadata.caseStudies[slug];
+      }
+      return metadata.caseStudy; // fallback to generic case study metadata
+    }
+    
     switch(path) {
       case '/':
         return metadata.home;
-      case '/medical':
+      case '/medical-billing-services':
         return metadata.medical;
-      case '/dental':
+      case '/dental-billing-services':
         return metadata.dental;
       case '/rcm-management':
         return metadata.rcm;
-      case '/insurance':
+      case '/insurance-billing-services':
         return metadata.insurance;
       case '/pricing':
         return metadata.pricing;
@@ -68,8 +81,14 @@ function MetadataManager() {
         return metadata.specialties.nephrology;
       case '/case-study':
         return metadata.caseStudy;
+      case '/hbs-marketing':
+        return metadata.hbsMarketing;
       case '/article-28-facilities':
         return metadata.article28;
+      case '/privacy-policy':
+        return metadata.privacyPolicy;
+      case '/terms-conditions':
+        return metadata.termsConditions;
       default:
         return metadata.notFound;
     }
@@ -112,10 +131,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/medical" element={<Medical />} />
-          <Route path="/dental" element={<Dental />} />
+          <Route path="/medical-billing-services" element={<Medical />} />
+          <Route path="/dental-billing-services" element={<Dental />} />
           <Route path="/rcm-management" element={<RcmSection />} />
-          <Route path="/insurance" element={<Insurance />} />
+          <Route path="/insurance-billing-services" element={<Insurance />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactForm />} />
@@ -128,7 +147,11 @@ function App() {
           <Route path="/psychiatry-billing-services" element={<PsychiatryBillingServices />} />
           <Route path="/nephrology-billing-services" element={<NephrologyBillingServices />} />
           <Route path="/case-study" element={<Casestudy />} />
+          <Route path="/case-study/:slug" element={<HBSCaseStudy />} />
           <Route path="/article-28-facilities" element={<ArticleFacilitiesPage />} />
+          <Route path="/hbs-marketing" element={<HBSMarketingPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
           {/* <Route path="/blog" element={<Blog />} /> */}
           {/* 404 catch-all route - must be last */}
           <Route path="*" element={<NotFound />} />

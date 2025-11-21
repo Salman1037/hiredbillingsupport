@@ -13,14 +13,14 @@ const Footer = () => {
     { name: "Contact", path: "/contact" }
   ];
   const specialtyServices = [
-    { name: "Neurology Billing", path: "/neurology-billing" },
-    { name: "Cardiology Billing", path: "/cardiology-billing" },
-    { name: "Endocrinology Billing", path: "/endocrinology-billing" },
-    { name: "Podiatry Billing", path: "/podiatry-billing" },
-    { name: "Orthopedic Billing", path: "/orthopedic-billing" },
-    { name: "OBGYN Billing", path: "/obgyn-billing" },
-    { name: "Psychiatry Billing", path: "/psychiatry-billing" },
-    { name: "Nephrology Billing", path: "/nephrology-billing" }
+    { name: "Neurology Billing", path: "/neurology-billing-services" },
+    { name: "Cardiology Billing", path: "/cardiology-billing-services" },
+    { name: "Endocrinology Billing", path: "/endocrinology-billing-services" },
+    { name: "Podiatry Billing", path: "/podiatry-billing-services" },
+    { name: "Orthopedic Billing", path: "/orthopedic-billing-services" },
+    { name: "OBGYN Billing", path: "/obgyn-billing-services" },
+    { name: "Psychiatry Billing", path: "/psychiatry-billing-services" },
+    { name: "Nephrology Billing", path: "/nephrology-billing-services" }
   ];
 
   const quickLinks = [

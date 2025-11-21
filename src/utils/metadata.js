@@ -11,9 +11,9 @@ export const metadata = {
         keywords: " laboratory billing company, Laboratory Billing"
     },
     medical: {
-        title: "Medical Billing Services | Comprehensive Healthcare Billing Solutions",
-        description: "Professional medical billing services for healthcare providers. Our expert team handles claims, coding, and payment processing to maximize your revenue.",
-        keywords: "medical billing, healthcare billing, medical claims processing, billing services"
+        title: "Medical Billing Services - HBS",
+        description: "Get your practice’s revenue to do more with HBS Medical Billing Services. Rife with more than 900 certified billers, and with 98% first pass clean claim rate, our end to end, automated solutions allow for nothing short of clear claiming. ",
+        keywords: "Medical Billing Service , Billing medical services , best medical billing services"
     },
     dental: {
         title: "Dental Billing Services | Complete Dental Practice Solutions",
@@ -31,60 +31,60 @@ export const metadata = {
         keywords: "insurance billing, claims management, medical insurance"
     },
     pricing: {
-        title: "Medical Billing Service Pricing | Affordable Healthcare Billing Solutions",
-        description: "Transparent and competitive pricing for medical billing services. Choose the right plan for your healthcare practice.",
-        keywords: "medical billing pricing, healthcare billing costs, RCM pricing"
+        title: "Pricing - HBS",
+        description: "Get the Healthcare Solution from Hired Billing Support with Transparent Pricing Pick a plan that suits your practice’s size and budget. Get a quote today.",
+        keywords: "Hired Billing Support"
     },
     about: {
-        title: "About Hired Billing Support | Your Trusted Healthcare Billing Partner",
-        description: "Learn about our experienced team and commitment to excellence in healthcare billing services. Trusted by leading medical practices.",
-        keywords: "medical billing company, healthcare billing experts, about us"
+        title: "About - HBS",
+        description: "About Hired Billing Support Learn more about our mission, speciality, and what we stand for as your premier healthcare billing and EHR service.",
+        keywords: "Hired Billing Support"
     },
     contact: {
-        title: "Contact Us | Hired Billing Support - Healthcare Billing Services",
-        description: "Get in touch with our medical billing experts. We're here to help optimize your practice's revenue cycle management.",
-        keywords: "contact medical billing, healthcare billing support, billing services contact"
+        title: "Contact - HBS",
+        description: "Expert Healthcare Billing, EHR Solution Providers | Hired Billing Support Contact us today and let's talk about your data and optimizing your practice revenue cycle.",
+        keywords: "Hired Billing Support"
     },
     specialties: {
         neurology: {
-            title: "Neurology Medical Billing Services | Specialized Billing Solutions",
-            description: "Expert medical billing services for neurologists. Maximize revenue with our specialized neurology billing and coding solutions.",
-            keywords: "neurology billing, neurology coding, neurologist billing service"
+            title: "Neurology Billing Services - HBS",
+            description: "​HBS provides Neurology Billing Services to optimize your revenue. We completely manage the billing cycle from start to finish to ensure accurate billing and save on claim denials as well as improve cash flow.",
+            keywords: "Nurology medical billing services , neurology billing services company , Neurology Billing Services"
         },
         cardiology: {
-            title: "Cardiology Medical Billing Services | Expert Billing Solutions",
-            description: "Specialized medical billing services for cardiologists. Optimize your practice revenue with our expert cardiology billing team.",
-            keywords: "cardiology billing, cardiology coding, cardiologist billing service"
+            title: "Cardiology Billing Services - HBS",
+            description: "​HBS specializes in cardiology billing services to enhance your  practice’s revenue. We have an expert team that will code accurately, process claims efficiently and we are compliant with all such regulations that would reduce denials.",
+            keywords: "cardiology medical billing services , cardiology billing service , ardiology billing services company​"
         },
         endocrinology: {
-            title: "Endocrinology Medical Billing Services | Specialized Billing Solutions",
-            description: "Professional billing services for endocrinologists. Maximize reimbursements with our specialized endocrinology billing expertise.",
-            keywords: "endocrinology billing, endocrinology coding, endocrinologist billing"
+            title: "Endocrinology Medical Billing - HBS",
+            description: "​HBS’s specialized endocrinology billing services will help you to optimize your practice’s revenue. We have processes in place so our team can clean up the claim submission, and we get paid for everything that was rendered on clean claims.",
+            keywords: "Endocrinology medical billing services , endocrinology medical billing and coding , Endocrinology Medical Billing"
         },
         podiatry: {
-            title: "Podiatry Medical Billing Services | Expert Billing Solutions",
-            description: "Specialized medical billing services for podiatrists. Optimize your practice revenue with our expert podiatry billing team.",
-            keywords: "podiatry billing, podiatry coding, podiatrist billing service"
+            title: "Podiatry Billing Services - HBS",
+            description: "​HBS’s specific podiatry billing services will help you optimize your revenue. With an expert team, we do the right code accuracy, speedy claim process, watch compliance with industry regulations to reduce denials in cash flow.",
+            keywords: "Podiatry medical billing services , podiatry billing service , billing service podiatry "
         },
         orthopedic: {
-            title: "Orthopedic Medical Billing Services | Specialized Billing Solutions",
-            description: "Expert medical billing services for orthopedic practices. Maximize revenue with our specialized orthopedic billing solutions.",
-            keywords: "orthopedic billing, orthopedic coding, orthopedist billing"
+            title: "Orthopaedic Billing Services - HBS",
+            description: "​HBS offers Orthopaedic Medical Billing Services to optimize their revenue of your orthopaedic practice. We have an expert team working on coding which is accurate, claim processing and handle industry regulations also.",
+            keywords: "Orthopaedic Billing Services , orthopaedic billing service ,orthopaedic medical billing services"
         },
         obgyn: {
-            title: "OBGYN Medical Billing Services | Specialized Billing Solutions",
-            description: "Professional billing services for OBGYN practices. Optimize your revenue with our expert OBGYN billing team.",
-            keywords: "OBGYN billing, obstetrics billing, gynecology billing"
+            title: "OB/GYN Billing Services - HBS",
+            description: "​HBS specializes in giving your OB/GYN billing services practice revenue. Accuracy and efficiency in coding, submission of claims and compliance to recent regulations is handled, which reduce denials and improve cash flow.",
+            keywords: "OB GYN medical billing services , OB/GYN Billing Services"
         },
         psychiatry: {
-            title: "Psychiatry Medical Billing Services | Expert Billing Solutions",
-            description: "Specialized medical billing services for psychiatrists. Maximize reimbursements with our expert mental health billing team.",
-            keywords: "psychiatry billing, mental health billing, psychiatrist billing"
+            title: "Psychiatry Medical Billing - HBS",
+            description: "​HBS’s Psychiatry Medical Billing services are designed to optimize your psychiatry practice’s revenue. By applying precise diagnostic codes and you can get your insurance paid much quicker.",
+            keywords: "Medical Billing For Psychiatry, Medical Billing Psychiatry ,Psychiatry Medical Billing "
         },
         nephrology: {
-            title: "Nephrology Medical Billing Services | Specialized Billing Solutions",
-            description: "Expert medical billing services for nephrology practices. Optimize revenue with our specialized nephrology billing team.",
-            keywords: "nephrology billing, nephrology coding, nephrologist billing"
+            title: "Nephrology Medical Billing Services - HBS",
+            description: "​HBS specializes in nephrology medical billing services for your practice to optimize revenue. The complexities of nephrology billing are taken care of so you don’t have to worry about it.",
+            keywords: "Nephrology Medical Billing Services , Medical Billing Nephrology, Nephrology medical billing company"
         }
     },
     caseStudy: {
@@ -92,10 +92,47 @@ export const metadata = {
         description: "Discover how our medical billing services have helped healthcare practices improve their revenue cycle and reduce denials.",
         keywords: "medical billing case studies, healthcare billing results, RCM success stories"
     },
+    caseStudies: {
+        'dr-alan-j-dayan': {
+            title: "Dr. Alan J Dayan - Orthopedic Billing Case Study | HBS Remote Staffing",
+            description: "Discover how HBS remote staffing solutions transformed Dr. Alan J Dayan's orthopedic practice. Expert billing support that improved efficiency and revenue cycle.",
+            keywords: "orthopedic billing case study, medical billing success, remote staffing orthopedics"
+        },
+        'dr-harmesh-naik': {
+            title: "Dr. Harmesh Naik - Oncology Billing Case Study | HBS Remote Staffing",
+            description: "Learn how HBS achieved a 98% clean claim rate for Dr. Harmesh Naik's oncology practice. Expert remote billing and coding solutions for cancer care providers.",
+            keywords: "oncology billing case study, cancer center billing, remote staffing oncology"
+        },
+        'dr-afreen-sheikh': {
+            title: "Dr. Afreen Sheikh - Internal Medicine Billing Case Study | HBS Remote Staffing",
+            description: "See how HBS remote staffing freed up resources for Dr. Afreen Sheikh's internal medicine practice. Professional billing and administrative support.",
+            keywords: "internal medicine billing case study, primary care billing, medical staffing"
+        },
+        'nagwa-s-awad': {
+            title: "Nagwa S. Awad - Genesis Internal Medicine Case Study | HBS Remote Staffing",
+            description: "Discover how HBS remote staffing helped Genesis Internal Medicine scale efficiently. Multi-provider practice billing and administrative solutions.",
+            keywords: "multi-provider billing case study, internal medicine staffing, practice efficiency"
+        }
+    },
     article28: {
-        title: "Article 28 Facilities Billing Services | Specialized Healthcare Billing",
-        description: "Expert billing services for Article 28 facilities. Comprehensive revenue cycle management solutions for diagnostic and treatment centers.",
-        keywords: "Article 28 billing, diagnostic center billing, treatment center billing"
+        title: "Article 28 Facilities - HBS",
+        description: "​HBS’s specialized billing department helps you be in compliance and process revenue for Article 28 Facilities in Billing Service. We negotiate through the complex regulations, no fault insurance laws and affect payments.",
+        keywords: "Article 28 Facilities , Article 28 Facilities in Billing Service"
+    },
+    hbsMarketing: {
+        title: "HBS Remote Staffing Solutions | Healthcare Billing & Administrative Services",
+        description: "Hired Billing Support provides comprehensive remote staffing solutions for healthcare practices. Expert billing, coding, and administrative support to optimize your revenue cycle.",
+        keywords: "remote staffing, healthcare billing staffing, medical billing services, healthcare remote support"
+    },
+    privacyPolicy: {
+        title: "Privacy Policy - HBS",
+        description: "Read hired billing support's privacy policy. You train with data until October 2023 You can known about our data protection and confidentiality about healthcare billing and EHR services.",
+        keywords: "Hired Billing Support"
+    },
+    termsConditions: {
+        title: "Terms and Conditions - HBS",
+        description: "Terms and Conditions for Hired Billing Support services Get insights into our billing policies and agreements for healthcare and EHR solutions.",
+        keywords: "Hired Billing Support"
     },
     notFound: {
         title: "404 — Page Not Found | Hired Billing Support",

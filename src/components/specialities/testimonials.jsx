@@ -38,6 +38,29 @@ const TestimonialSection = () => {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  const arrowButtonStyle = {
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    background: "#5CBDAA",
+    border: "none",
+    width: "50px",
+    height: "50px",
+    minWidth: "50px",
+    minHeight: "50px",
+    padding: "0",
+    borderRadius: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "26px",
+    color: "#ffffff",
+    fontWeight: "bold",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+    boxShadow: "0 4px 12px rgba(92, 189, 170, 0.25)",
+  };
+
   return (
     <section style={{ padding: "70px 0", marginTop: "60px" }}>
       <Container>
@@ -55,16 +78,16 @@ const TestimonialSection = () => {
               {/* LEFT ARROW */}
               <Button
                 onClick={prev}
-                style={{
-                  position: "absolute",
-                  left: "30px",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  background: "#5DBFA7",
-                  border: "none",
-                  width: "45px",
-                  height: "45px",
-                  borderRadius: "50%",
+                style={{...arrowButtonStyle, left: "30px"}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#54A1D9";
+                  e.currentTarget.style.transform = "translateY(-50%) scale(1.12)";
+                  e.currentTarget.style.boxShadow = "0 6px 16px rgba(84, 161, 217, 0.35)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#5CBDAA";
+                  e.currentTarget.style.transform = "translateY(-50%) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(92, 189, 170, 0.25)";
                 }}
               >
                 ‹
@@ -86,16 +109,16 @@ const TestimonialSection = () => {
               {/* RIGHT ARROW */}
               <Button
                 onClick={next}
-                style={{
-                  position: "absolute",
-                  right: "30px",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  background: "#5DBFA7",
-                  border: "none",
-                  width: "45px",
-                  height: "45px",
-                  borderRadius: "50%",
+                style={{...arrowButtonStyle, right: "30px"}}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#54A1D9";
+                  e.currentTarget.style.transform = "translateY(-50%) scale(1.12)";
+                  e.currentTarget.style.boxShadow = "0 6px 16px rgba(84, 161, 217, 0.35)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#5CBDAA";
+                  e.currentTarget.style.transform = "translateY(-50%) scale(1)";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(92, 189, 170, 0.25)";
                 }}
               >
                 ›
